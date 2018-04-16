@@ -4,7 +4,7 @@
  * @description :: Server-side logic for managing Logins
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
-
+//Test
 //var ActiveDirectory = require('activedirectory');
 
 module.exports = {
