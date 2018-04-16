@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="course_details_container">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3 class="text-format">Item Pack Quantity</h3>
+
+          <p>
+            <ul>
+              <li><b>Vendor pack quantity</b> is the total amount of units in the box that ships from the supplier.</li>
+              <li><b>Warehouse pack quantity</b> is the total amount of units in the inner pack shipped to store.</li>
+              <li><b>Case Pack Items </b> - <b>Do not contain inner packs.</b> The quantity the supplier ships to the DC
+                is the quantity shipped to the stores. The item will be built with the total quantity as the vendor pack
+                and the warehouse pack.
+              </li>
+              <li><b>Break Pack Items </b> - <b>The vendor pack contains inner packs. </b> The vendor will ship the
+                inner packs contained within an additional box. The DC will break open the vendor pack and ship the
+                warehouse packs to the stores. Store distributions are created using warehouse packs.
+              </li>
+
+          <p>
+          <center><img ng-src="{{course.assets.ItemPack}}" width="904px" height="190px"/></center>
+          </p>
+          </ul></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

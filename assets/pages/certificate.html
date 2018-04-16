@@ -1,0 +1,40 @@
+<div class="col-lg-12 content_wrapper">
+  <div class="certification_container">
+    <div class="top_heading">
+      <h3>Certification Page</h3>
+    </div>
+    <div class="certification_level shadow-wrapper clearfix">
+      <div class="col-md-4">
+        <div class="tag-box tag-box-v1 box-shadow shadow-effect-2">
+          <h2>Bronze Level</h2>
+          <img src="images/bronse_prize.png" class="img-responsive" alt="">
+          <p>Bronze prize will be awarded if you complete 4 courses.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="tag-box tag-box-v1 box-shadow shadow-effect-2">
+          <h2>Silver Level</h2>
+          <img src="images/diamound_prize.png" class="img-responsive" alt="">
+          <p>Silver prize will be awarded if you complete 8 courses.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="tag-box tag-box-v1 box-shadow shadow-effect-2">
+          <h2>Gold Level</h2>
+          <img src="images/gold_prize.png" class="img-responsive" alt="">
+          <p>Gold prize will be awarded if you complete 12 courses.</p>
+        </div>
+      </div>
+    </div>
+    <div class="certification_completion">
+      <div ng-show="badge.status !== 'default'">
+        <p>Congratulations {{certvm.app.user.name}}</p>
+        <p>You Have achieved bronze Level</p>
+        <span><img src="{{certvm.getCertificationImageUrl(badge.status)}}"></span>
+      </div>
+      <div ng-hide="badge.status !== 'default'">
+        <p>Hi {{certvm.app.user.name}}, Please complete the courses to attain the above levels.</p>
+      </div>
+    </div>
+  </div>
+</div>

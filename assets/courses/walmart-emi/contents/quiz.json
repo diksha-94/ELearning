@@ -1,0 +1,182 @@
+{
+    "id": "emi",
+    "name": "Walmart & EMI",
+    "description": "So, please check your level of learning in Walmart & EMI section !!",
+    "passPercentage": "90",
+    "mode": "wizard",
+    "questions":[
+        {
+            "id": 1,
+            "type": "multipleChoice",
+            "question": "What is EMI?",
+            "options": [
+                {"id": 1, "text": "Equal Monthly Installment"},
+                {"id": 2, "text": "Enterprise Membership Information"},
+                {"id": 3, "text": "Enterprise Master Item"},
+                {"id": 4, "text": "Economic Manufacturing Index"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 2,
+            "type": "multipleChoice",
+            "question": "Which of the following is not a business entity of Walmart Inc?",
+            "options": [
+                {"id": 1, "text": "Walmart Stores"},
+                {"id": 2, "text": "Marketplace"},
+                {"id": 3, "text": "Sam's Club"},
+                {"id": 4, "text": "GEC"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+        {
+            "id": 3,
+            "type": "multipleChoice",
+            "question": "Which of the below are business benefit of EMI?",
+            "options": [
+                {"id": 1, "text": "Visibility across business segments"},
+                {"id": 2, "text": "Better enterprise level decision making"},
+                {"id": 3, "text": "Business Automation"},
+                {"id": 4, "text": "Streamlined Item Setup Process"},
+                {"id": 5, "text": "All of the above"}
+            ],
+            "answer": 5,
+            "score": 1
+        },
+        {
+            "id": 4,
+            "type": "multipleChoice",
+            "question": "Which of the following is not a benefit of EMI?",
+            "options": [
+                {"id": 1, "text": "Customer-Driven Attribute Governance"},
+                {"id": 2, "text": "Single, Unified Customer Facing Item File for the Enterprise"},
+                {"id": 3, "text": "Suppliers can be excluded from Item creation process."},
+                {"id": 4, "text": "Improved data quality and consistency"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 5,
+            "type": "multipleChoice",
+            "question": "Identify the external stakeholder(s) of EMI?",
+            "options": [
+                {"id": 1, "text": "Sam's Club"},
+                {"id": 2, "text": "Walmart International"},
+                {"id": 3, "text": "Suppliers"},
+                {"id": 4, "text": "None of the above"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 6,
+            "type": "multipleChoice",
+            "question": "Identify which of the below is not a Key component of EMI",
+            "options": [
+                {"id": 1, "text": "Workflow"},
+                {"id": 2, "text": "Attributes"},
+                {"id": 3, "text": "Pre Item"},
+                {"id": 4, "text": "ADS"}
+            ],
+            "answer": 4,
+            "score": 1
+        },
+        {
+            "id": 7,
+            "type": "multipleChoice",
+            "question": "What are the  4 main divisions of Walmart Business",
+            "options": [
+                {"id": 1, "text": "Walmart US, Walmart International, Sam's Club,  Walmart Global e Commerce"},
+                {"id": 2, "text": "Walmart UK, Walmart International, Sam's Club, Walmart Global e Commerce"},
+                {"id": 3, "text": "Supercenter, Neighborhood market, Walmart to go, Walmart Pick up grocery"},
+                {"id": 4, "text": "None of the above"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 8,
+            "type": "multipleChoice",
+            "question": "At what concept level are the items maintained currently in Walmart?",
+            "options": [
+                {"id": 1, "text": "Trade Item"},
+                {"id": 2, "text": "Supply Item"},
+                {"id": 3, "text": "Product"},
+                {"id": 4, "text": "Core Product"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 9,
+            "type": "multipleChoice",
+            "question": "What is the lowest level in trade item hierarchy?",
+            "options": [
+                {"id": 1, "text": "Pallet"},
+                {"id": 2, "text": "Each"},
+                {"id": 3, "text": "Case"},
+                {"id": 4, "text": "Warehouse Pack"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+        {
+            "id": 10,
+            "type": "multipleChoice",
+            "question": "Order management and inventory management functions are benefits of which of the below concepts?",
+            "options": [
+                {"id": 1, "text": "Product"},
+                {"id": 2, "text": "Core Product"},
+                {"id": 3, "text": "Supply Item"},
+                {"id": 4, "text": "Trade Item"}
+            ],
+            "answer": 4,
+            "score": 1
+        },
+        {
+            "id": 11,
+            "type": "multipleChoice",
+            "question": "Replenishment Method is part of which concept level",
+            "options": [
+                {"id": 1, "text": "Product"},
+                {"id": 2, "text": "Offer"},
+                {"id": 3, "text": "Supply Item"},
+                {"id": 4, "text": "Trade Item"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 12,
+            "type": "multipleChoice",
+            "question": "Which concept level is specific to Walmart Internal View?",
+            "options": [
+                {"id": 1, "text": "Core Product"},
+                {"id": 2, "text": "Offer"},
+                {"id": 3, "text": "Trade Item"},
+                {"id": 4, "text": "Supply Item"}
+            ],
+            "answer": 4,
+            "score": 1
+        },
+        {
+            "id": 13,
+            "type": "multipleChoice",
+            "question": "What is the the technology group in GeC called?",
+            "options": [
+                {"id": 1, "text": "Information System Division"},
+                {"id": 2, "text": "@WalmartLabs"},
+                {"id": 3, "text": "Walmart GEC"},
+                {"id": 4, "text": "GEC Labs"}
+            ],
+            "answer": 3,
+            "score": 1
+        }
+    ]
+}
+
+
+

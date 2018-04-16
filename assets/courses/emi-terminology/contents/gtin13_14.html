@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="course_details_container">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3 class="text-format">GTIN TYPES</h3>
+          <b>GTIN-13 (used in EAN-13 bar codes)</b>
+          <ul>
+            <li>Twelve digits containing a GS1 Company Prefix and the Item Reference assigned by your company</li>
+            <li>One digit representing the Check Digit</li>
+          </ul>
+          <b>GTIN-14 (used in ITF-14, GS1-128 (formerly UCC/EAN-128), Reduced Space Symbols, and Data Matrix bar codes,
+            plus EPCs)</b>
+          <ul>
+            <li>One digit representing the Indicator digit to indicate packaging level</li>
+            <li>Twelve digits the GS1 Company Prefix and the Item Reference assigned by your company</li>
+            <li>One digit representing the Check Digit</li>
+          </ul>
+          The following table shows how different GTIN structures are stored as a GTIN - 14 by <b>adding leading
+          zeroes.</b>
+          <center>
+            <img ng-src="{{course.assets.gtin}}">
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="course_test_container">
+  <div class="top_heading">
+    <h3>Course Test</h3>
+  </div>
+  <div class="crse_test_wrap">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 ng-bind="qzvm.courseName"></h4>
+      </div>
+      <div class="panel-body" ng-show="qzvm.quizStarted">
+        <question-instance instance="qzvm.activeQuestion"></question-instance>
+      </div>
+      <div class="panel-body" ng-hide="qzvm.quizStarted">
+        <div>
+          <p>There are {{qzvm.quiz.questions.length}} questions in the course test. You must answer all questions.</p>
+          <span class="tst_btn_area">
+            <button class="btn btn-default test_btn" ng-click="qzvm.startQuiz()">Take Test</button>
+            <button class="btn btn-default test_btn" ng-click="qzvm.reviewCourse()">Retake Course</button>
+          </span>
+        </div>
+        <div class="progress_bar_area">
+          <p>Course test result</p>
+          <div class="col-md-6 progress_bar_section">
+            <div class="progress">
+              <div class="progress-bar" role="progressbar"
+                   aria-valuenow="{{qzvm.quiz.passPercentage}}" aria-valuemin="0" aria-valuemax="100" style="width:{{qzvm.quiz.passPercentage}}%">
+                {{qzvm.quiz.passPercentage}}%
+                <div class="tooltip_indicator">
+                  {{qzvm.quiz.passPercentage}}% Required for Course Test
+                </div>
+              </div>
+              <div class="progress-bar progress-bar-striped active completed_progress" role="progressbar"
+                   aria-valuenow="{{qzvm.quiz.score}}" aria-valuemin="0" aria-valuemax="100" style="width:{{qzvm.quiz.score}}%">{{qzvm.quiz.score}}%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer course_btn_area" ng-show="qzvm.quizStarted">
+        <div class="crse_btn_wrap">
+          <ul class="pager">
+            <li class="cursor_class">
+              <a ng-click="qzvm.previousQuestion()" ng-disabled="qzvm.activeQuestion.number === 1" ng-class="{'btn_disabled': qzvm.activeQuestion.number === 1}">Previous</a>
+            </li>
+            <li>
+              <span class="label_pager">{{qzvm.activeQuestion.number}}/{{qzvm.totalQuestions}}</span>
+            </li>
+            <li class="cursor_class">
+              <a ng-click="qzvm.nextQuestion()" ng-show="qzvm.activeQuestion.number !== qzvm.totalQuestions">Next</a>
+              <a ng-click="qzvm.nextQuestion()" ng-hide="qzvm.activeQuestion.number !== qzvm.totalQuestions">Finish</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

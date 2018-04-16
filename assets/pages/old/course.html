@@ -1,0 +1,96 @@
+<div ng-if="course !== null">
+  <header role="banner" id="fh5co-header" class="navbar-fixed-top">
+    <div class="container">
+      <!-- <div class="row"> -->
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <!-- Mobile Toggle Menu Button -->
+          <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar"
+             aria-expanded="false" aria-controls="navbar"><i></i></a>
+          <div id="ustlogo">
+            <img src="images/ust_logo.png" height="55px" width="180px" align="left">
+          </div>
+          <a class="navbar-brand" ng-bind="course.manifest.name"></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div id="course-wrapper" ng-class="{'toggled': application.leftPanel === true}">
+    <div id="page-content-wrapper">
+      <!--<div ng-controller="leftPanelController" ng-hide="course.activePage.type === 'quiz' && course.activeQuiz">-->
+      <div ng-controller="leftPanelController">
+        <div md-whiteframe="3" class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper">
+          <div class="nav-side-menu">
+            <div class="menu-list"
+                 data-angular-treeview="true"
+                 data-tree-id="cTree"
+                 data-tree-model="[course.manifest]"
+                 data-node-label="name"
+                 data-node-children="chapters">
+            </div>
+            <div>
+              <span>Progress :</span>
+              <span>{{course.metadata.totalRead}}/{{course.metadata.totalChapters}}</span>
+            </div>
+            <div>
+              <span>Reviews :</span>
+              <span>{{course.metadata.reviews}}</span>
+            </div>
+            <div>
+              <span>Status :</span>
+              <span>{{course.metadata.status}}</span>
+            </div>
+            <div>
+              <span>Quiz Attempts :</span>
+              <span>{{course.metadata.quizAttempts}}</span>
+            </div>
+            <div>
+              <span>Quiz Status :</span>
+              <span>{{course.metadata.quizPassed}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" ng-controller="contentController">
+        <div class="col-md-12">
+          <div ng-if="course.activePage.type === 'page'" ng-include="course.activePage.absUrl"></div>
+          <div ng-if="course.activePage.type === 'quiz' && course.activeQuiz">
+            <quiz-manager quiz="course.activeQuiz" active-user="{{user.name}}"
+                          on-review-course="reviewCourse()"
+                          on-quiz-completed="quizCompleted()"
+                          on-exit-course="unloadCourse()">
+            </quiz-manager>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer role="banner" id="fh5co-footer" class="navbar-fixed-bottom" ng-hide="course.activePage.type === 'quiz' && course.activeQuiz">
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <md-switch ng-model="course.autoPlay" aria-label="Auto-play">
+            <span ng-class="{active: course.autoPlay === true}" text-color="white">Auto-Play</span>
+          </md-switch>
+        </li>
+        <li>
+          <md-button ng-click="onPreviousClick()" ng-disabled="isFirstPage()" class="md-fab md-mini headerButton"
+                     aria-label="Previous">
+            <md-icon md-svg-src="images/icons/left.svg"></md-icon>
+          </md-button>
+        </li>
+        <li>
+          <md-button ng-click="onNextClick()" ng-disabled="isLastPage()" class="md-fab md-mini headerButton"
+                     aria-label="Next">
+            <md-icon md-svg-src="images/icons/right.svg"></md-icon>
+          </md-button>
+        </li>
+        <li>
+          <md-button ng-click="unloadCourse()" class="md-fab md-mini headerButton" aria-label="Close">
+            <md-icon md-svg-src="images/icons/exit.svg"></md-icon>
+          </md-button>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>

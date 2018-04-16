@@ -1,0 +1,105 @@
+{
+    "id": "emi",
+    "name": "Walmart Stores Item Creation - Current State",
+    "description": "So, please check your level of learning in Walmart Stores Item Creation - Current State section !!",
+    "passPercentage": "90",
+    "mode": "wizard",
+    "questions":[
+        {
+            "id": 1,
+            "type": "multipleChoice",
+            "question": "1. __________ is used for capturing Import Item information from Suppliers",
+            "options": [
+                {"id": 1, "text": "GDSN "},
+                {"id": 2, "text": "Supplier Quote"},
+                {"id": 3, "text": "Online Item File"},
+                {"id": 4, "text": "None of the above"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+        {
+            "id": 2,
+            "type": "multipleChoice",
+            "question": "2. GDSN is used for publishing domestic item information to Data Synch by Suppliers",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 3,
+            "type": "multipleChoice",
+            "question": "3. ___________ is uploaded into OIF  to perform OIF validation.",
+            "options": [
+                {"id": 1, "text": "Form 32"},
+                {"id": 2, "text": "Form 64"},
+                {"id": 3, "text": "Form 33"},
+                {"id": 4, "text": "Form 1A"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 4,
+            "type": "multipleChoice",
+            "question": "4. Who reviews and approves Form 33 ?",
+            "options": [
+                {"id": 1, "text": "Buyer"},
+                {"id": 2, "text": "Supplier"},
+                {"id": 3, "text": "Order Specialist"},
+                {"id": 4, "text": "Replenishment Manager"}
+            ],
+            "answer": 4,
+            "score": 1
+        },
+        {
+            "id": 5,
+            "type": "multipleChoice",
+            "question": "5. Item creation process consists of 2 types, namely Single & Mass Item Creation",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 6,
+            "type": "multipleChoice",
+            "question": "6. An existing Item number cannot be copied during new Item Creation.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+        {
+            "id": 7,
+            "type": "multipleChoice",
+            "question": "7. Mass Item Creation enables Suppliers to create multiple items simultaneously using an Item Creation Spreadsheet.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 8,
+            "type": "multipleChoice",
+            "question": "8. Completed quotes will have to be 'staged' (linked to OIF) for the item to be created successfully.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        }   
+
+    ]
+}
+    

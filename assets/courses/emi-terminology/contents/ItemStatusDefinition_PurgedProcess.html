@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="course_details_container">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3 class="text-format">ITEM STATUS DEFINITIONS</h3>
+
+          <p><h4 class="text-format">Purged</h4>
+
+          The <b>purge process</b> is used to clean up the item file. After the item is purged,
+          it cannot be scanned or ordered at store level. When the item meets the criteria of
+          the Deletion or Inactivation process the system will determine if there has been
+          activity on an item.
+          <ul>
+            <p>
+            <li><b>No Activity -</b> If there has not been any activity the item will be
+              purged from the system and it will no longer be visible in OIF, HOST, or
+              store systems. However, queries can still be pulled from Retail Link to
+              gather sales data
+            </li>
+
+            <p>
+            <li><b>Activity -</b> If the item had activities in the last 30 days it will
+              remain "on file" in OIF, HOST, and store systems. The system looks at the item
+              every week and purges it when there has been no activity for that week
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

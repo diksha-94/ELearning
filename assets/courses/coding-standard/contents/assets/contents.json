@@ -1,0 +1,249 @@
+{
+	"JavaDoc": [{
+		"Checks": "Class Level Java doc comments proper and meaningful",
+		"Severity": "Major",
+		"Example": "/** * Hello1 --- program to print \"Hello World.\" <br>* @author Blanca Polo <br>*/ <br>public class Hello1 {<br>}",
+		"Comments": "Raise the comment only if the comments are available but  the description is not proper.No need to raise an issue if the comments are not completely available or missing param or throws or return tags as it will be trapped by Checkstyle."
+		
+	}, 
+	{
+		"Checks": "Method Level Java doc comments proper and meaningful",
+		"Severity": "Major",
+		"Example": "/** * * Prints out \"Hello World\"  <br>* and the command line arguments. <br>* @param arg A string array containing <br>* the command line arguments.<br>* * @exception Any exception <br>* @return No return value.<br>/*<br> public static void main (String[] arg){<br>:<br>}",
+		"Comments": "Raise the comment only if the comments are available but  the description is not proper.No need to raise an issue if the comments are not completely available or missing param or throws or return tags as it will be trapped by Checkstyle."
+		
+	}],
+	"Basic": [{
+		"Checks": "Code should be adequately indented and formatted",
+		"Severity": "Major",
+		"Example": "If code is not formatted and adequately indented such that it’s difficult to read, it MUST be appropriately formatted before continuing.",
+		"Comments": "Code should be easily readable and understandable."
+		
+	}, 
+	{
+		"Checks": "Follow proper package naming conventions ",
+		"Severity": "Medium",
+		"Example": "Package names are written in all lower case to avoid conflict with the names of classes or interfaces.<br><br>Companies use their reversed Internet domain name to begin their package names—for example, com.example.mypackage for a package named mypackage created by a programmer at example.com.<br><br4>Name collisions that occur within a single company need to be handled by convention within that company, perhaps by including the region or the project name after the company name (for example, com.example.region.mypackage).<br><br>Packages in the Java language itself begin with java. or javax.",
+		"Comments": "NA"
+		
+	},
+	{
+		"Checks": "Have meaningful adequate inline documentation ",
+		"Severity": "Medium",
+		"Example": "Inline documentation, or \"comments\", is a habit of good programming that beginners don't always use effectively. They should be used the way a storyteller would pause the plot to tell some backstory or give exposition to help the reader understand what the characters are saying and doing",
+		"Comments": "NA"
+		
+	}, 
+	{
+		"Checks": "Duplicated methods should not be present",
+		"Severity": "Major",
+		"Example": "Add the common codes which are used at different positions inside a class to a common place.",
+		"Comments": "Duplicated methods should not be present."
+		
+	},
+	{
+		"Checks": "Commented code should not be present",
+		"Severity": "Minor",
+		"Example": "Remove all commented codes before committing any.",
+		"Comments": "NA"
+		
+	}, 
+	{
+		"Checks": "Should not use number constant names as NUMBER_TWO, NUMBER_TWENTY like that. Instead use meaningful names for the constants based on context (Ex. MAX_REFRESH_COUNT).",
+		"Severity": "Major",
+		"Example": "public class VaribleNameExample{<br>final int  NUMBER_TWO=2;  // Wrong way<br>final int MAX_REFRESH_COUNT=2;  //Correct way<br>                        }",
+		"Comments": "NA"
+		
+	},
+	{
+		"Checks": "Are custom logic written instead of using available API methods?",
+		"Severity": "Critical",
+		"Example": "Try to use the existing API methods instead of writing custom method for the same. EX: for sorting the contents of a List we may write our logic but we do have an utility called Collections.sort ",
+		"Comments": "API methods should be used if available."
+		
+	}, 
+	{
+		"Checks": "Use meaningful variable names",
+		"Severity": "Major",
+		"Example": "1.- The variable name has to be as descriptive as possible. Don´t use generic names.<br>Good example: daysDateRange, flightNumber, carColor.<br>Bad example: days, dRange, temp, data, aux…<br><br>2.- The variable name has to be as short as possible.<br>Good Examples: timeToOpenTheDoor, MaterialSize.<br>Bad Examples: howLonDoesItTakeToOpenTheDoor, howBigIsTheMaterial…",
+		"Comments": "Makes code readable"
+		
+	},	
+	{
+		"Checks": "Functions or methods should do only one thing",
+		"Severity": "Major",
+		"Example": "If we have another functionality to be implements along with the same function write it as a separate function so that it will help in code reusability.",
+		"Comments": "NA"
+		
+	}, 
+	{
+		"Checks": "Classes should be small",
+		"Severity": "Major",
+		"Example": "Classes should have a small number of instance variables. Each of the methods of a class should manipulate one or more of those variables. In general the more variables a method manipulates the more cohesive that method is to its class. A class in which each variable is used by each method is maximally cohesive. In general it is neither advisable nor possible to create such maximally cohesive classes; on the other hand, we would like cohesion to be high. When cohesion is high, it means that the methods and variables of the class are co-dependent and hang together as a logical whole.",
+		"Comments": "NA"
+		
+	},
+	{
+		"Checks": "Minimize the accessibility of classes and members",
+		"Severity": "Major",
+		"Example": "Should not declare all ots members as public. Use the access modifiers strictly based on the requirement.",
+		"Comments": "NA"
+		
+	}, 
+	{
+		"Checks": "Test cases for every line of code",
+		"Severity": "Major",
+		"Example": "The Source Code<br><br>class WordWrap {<br><br>    public function wrap($string = '', $cols) {<br><br>        $string = trim($string);<br>        if (strlen($string) > $cols) {<br>            $lastSpaceIndex = strrpos(substr($string, 0, $cols), ' ');<br>            if ($lastSpaceIndex !== false && substr($string, $cols, 1) != ' ') {<br>                return substr($string, 0, $lastSpaceIndex) . \"\n\" . $this->wrap(substr($string, $lastSpaceIndex), $cols);<br>            } else {<br>                return substr($string, 0, $cols) . \"\n\" . $this->wrap(substr($string, $cols), $cols);<br>            }<br>        }<br>        return $string;<br>    }<br>}<br><br>The Test Code<br><br><br>class WordWrapTest extends PHPUnit_Framework_TestCase {<br><br>    function testItCanWrap() {<br><br>        $w = new WordWrap();<br><br>        $this->assertEquals('', $w->wrap(null, 0));<br>        $this->assertEquals('', $w->wrap('', 0));<br>        $this->assertEquals('a', $w->wrap('a', 1));<br>        $this->assertEquals(\"a\nb\", $w->wrap('a b', 1));<br>        $this->assertEquals(\"a b\nc\", $w->wrap('a b c', 3));<br>        $this->assertEquals(\"a\nbc\nd\", $w->wrap('a bc d', 3));<br>    }<br>}",
+		"Comments": "Unit tests should be added."
+		
+	},
+	
+	{
+		"Checks": "Proper indentation and formatting",
+		"Severity": "Medium",
+		"Example": "Indentation<br><br>1.All indenting is done with spaces, not tabs. All indents are four spaces.<br>2.Matching braces always line up vertically in the same column as their construct.<br>3.All if, while and for statements must use braces even if they control just one statement.",
+		"Comments": "NA"
+		
+	},	
+	{
+		"Checks": "Reduce the cyclomatic complexity by re-factoring any methods with a complexity of more than 10.",
+		"Severity": "Major",
+		"Example": "Let’s see some ways by which we can reduce the cyclomatic complexity:<br><br>1. Validate and remove unwanted if statements: its known problem and a code issue that more the conditional statements, the more are the code complexities. First validate and see which if statements can be removed so the code complexity is reduced.<br>2. Refactoring: refactoring is helpful in dealing with very high cyclomatic complexity of source code. The higher the number, the more it needs refactoring. Every developer should try refactoring bigger methods into smaller methods to reduce the code complexity. Use the single responsibility principle to break bigger classes into smaller ones thus reducing dependency on single class doing multiple functions.<br>3. Remove unnecessary/redundant else conditions: if the if. Else block are doing some logic or returning something based on some condition, then its better to have just one single if statement, instead of if..else block. Remember that even the else in this case would be redundant.",
+		"Comments": "NA"
+		
+	}, 
+	{
+		"Checks": "Avoid Duplicate Literals",
+		"Severity": "Major",
+		"Example": "Duplicated string literals make the process of refactoring error-prone, since you must be sure to update all occurrences.",
+		"Comments": "NA"
+		
+	},
+	{
+		"Checks": "Ncss Method Count - Searches for long (more than 50 lines of code) methods.",
+		"Severity": "Major",
+		"Example": "NCSS stands for Non-Commented Source Code lines. Methods and/or classes that have high NCSS counts are (at a very high level) too long, and can probably be split up. High numbers of NCSS are bad.",
+		"Comments": "NA"
+		
+	}, 
+	{
+		"Checks": "Ncss Type Count - Searches for long (more than 800 lines of code) types",
+		"Severity": "Major",
+		"Example": "Our rule says that this count should not be more than 800, which is the default value.....NCSS type is meant for the whole class... this means ignoring white spaces and commented lines the NCSS count for the class should be less than 800 if it is more than this, it is always better to split the class.",
+		"Comments": "NA"
+		
+	}],
+	"CamelRoutes":[{
+		"Checks": "CAMEL - Validate outputs from external interfaces - Especially in JSON/XML parsing.",
+		"Severity": "Critical",
+		"Example": "JSONs used from the third party services should be validated first, so that any exception caught during the validation should be thrown as a JSONException along with proper messages. This makes the user to identify the bug and the service wont throw any other exceptions because of this Bad Data.",
+		"Comments": "NA"
+	},
+	{
+		"Checks": "CAMEL - Use onException in all Routes and have custom ExceptionProcessor to handle exceptions",
+		"Severity": "Major",
+		"Example": "onException should be the first statement of the CamelRoute so that all the exception which may occur in any of the Routes defined below will be caught here and will be processed uniformly, so that the requirem message could be transferred back to the Jersey Layer.",
+		"Comments": "NA"
+	},
+	{
+		"Checks": "CAMEL - Use beans over processors for medium to highly complex use-cases. This enables efficient unit testing and lighter weight processing",
+		"Severity": "Major",
+		"Example": "instead of using .process and writing the logic inside CamelRoute, it is always better to take out the Logic outside to a separate class.<br>Ex:<br> .from(ENDPOINT)<br>.id(ID)<br>.process(new Processor()<br>        {<br>    private void process(Exchange ex){<br>                   //<br>              });<br>Instead we can call the method of a seperate class for the same function:<br> .from(ENDPOINT)<br>.id(ID)<br>.bean(\"<Class Name>\", \"<MethodName>\")",
+		"Comments": "NA"
+	}],
+	"ExceptionHandling":[{
+		"Checks": "Use checked exceptions for recoverable conditions and runtime exceptions for programming errors",
+		"Severity": "Major",
+		"Example": "All runtime exceptions should be used only to indicate programming errors, such as precondition violations.",
+		"Comments": "NA"
+	},
+	{
+		"Checks": "Favor the use of standard exceptions",
+		"Severity": "Major",
+		"Example": "The java platform libraries provide a basic set of unchecked exceptions that cover a large fraction of the exception-throwing needs of most APIs. It makes your API easier to learn and use it beacuse it matches established conventions with which programmers are already familiar.<br>Exceptions<br>IllegalArgumentException<br>IllegalStateException<br>NullPointerException<br>ConcurrentModificationException<br>UnsupportedOperationException",
+		"Comments": "NA"
+	},
+	{
+		"Checks": "Don't ignore exceptions. No empty catch blocks",
+		"Severity": "Critical",
+		"Example": "Usually empty try-catch is a bad idea because you are silently swallowing an error condition and then continuing execution",
+		"Comments": "NA"
+	},
+	{
+		"Checks": "Close or release resource in finally block",
+		"Severity": "Critical",
+		"Example": "try {<br>  // Use the resource.<br>} catch( Exception ex ) {<br>  // Problem with the resource.<br>} finally {<br>  // Put away the resource.<br>  closeQuietly( resource );<br>}",
+		"Comments": "NA"
+	},
+	{
+		"Checks": " Including cause of Exception in stack-trace. Have meaningful message for all exceptions",
+		"Severity": "Major",
+		"Example": "Better way is to add the exception message along with our custom message so that the cause will be clear for the end user.<br>EX: catch(Exception e){\n LOGGER.ERROR(\"Our custom message\" + e.getMessage())<br>}",
+		"Comments": "NA"
+	},
+	{
+		"Checks": " Convert Checked Exception into RuntimeException. Throw meaningful Runtime excpetions to client layer",
+		"Severity": "Major",
+		"Example": "A RuntimeException should be used only when the client cannot recover from whatever the problem is. It is occasionally appropriate to do what you are talking about, but more often it is not appropriate.<br><br>If you are using a JDK >= 1.4, then you can do something like:<br><br>  try { <br> // Code that might throw an exception<br>} catch (IOException e) {<br>  throw new RuntimeException(e);<br>} catch (ClassNotFoundException e) {<br>  throw new RuntimeException(e);<br>}",
+		"Comments": "NA"
+	}],
+	"Logging":[{
+		"Checks": "Are there enough logDebug messages in code?",
+		"Severity": "Critical",
+        "Example": "public class LoggerExample {<br><br>    private static final Logger LOGGER = Logger.getLogger(LoggerExample.class.getName());<br>    public static void main(String[] args) throws SecurityException, IOException {<br>        LOGGER.info(\"Logger Name: \"+LOGGER.getName());<br>        LOGGER.warning(\"Can cause ArrayIndexOutOfBoundsException\");      <br>       int []a = {1,2,3};<br>        int index = 4;<br>        try{<br>            System.out.println(a[index]);<br>        }catch(ArrayIndexOutOfBoundsException ex){<br>            LOGGER.log(Level.SEVERE, \"Exception occur\", ex);<br>       }<br>}<br>}",
+		"Comments": "There should be enough debug statements in the code to trace the flow which will be helpful in UAT or Production environments to resolve the issue."
+	},
+	{
+		"Checks": "Level of loggings and meaningful logger statements",
+		"Severity": "Major",
+		"Example": "All the Logs corresponding to the exception should be Logged as LOGGER.Error",
+		"Comments": "NA"
+	},
+	{
+		"Checks": "Know what is being logged. Avoid NPEs",
+		"Severity": "Major",
+		 "Example": "public void m1(){<br>            User user = UserUtil.getUser();<br>            log.debug(\"User Id \" + user.getId());<br>      } <br> If in above example Id will be null then it can cause a NPE",
+		"Comments": "log.debug(Processing request with id: {}, request.getId()); This can cause an NPE. "
+	},
+	{
+		"Checks": "Be concise and descriptive while logging messages",
+		"Severity": "Medium",	
+		"Example": "A log file should be readable, clean and descriptive. Don’t use magic numbers, log values, numbers, ids and include their context. Show the data being processed and show its meaning. Show what the program is actually doing. Good logs can serve as a great documentation of the application code itself.",	
+		"Comments": "Each logging statement should contain both data and description. log.debug(Message with id '{}' processed, message.getJMSMessageID());This uses SLf4J logging framework, by far the best framework"
+	},
+	{
+		"Checks": " Log exceptions properly",
+		"Severity": "Medium",
+		"Example": "",
+		"Comments": "log.error(Error reading config file, e); Don’t include exception message, as it will be printed automatically after the log statement, preceding stack trace. But in order to do so, you must pass the exception itself as the second argument."
+	}],
+	"NullChecks":[{
+		"Checks": "Have Proper null checks especially in the methods exposed as public or protected?",
+		"Severity": "Critical",
+		"Example": "Null checks to the objects used should be done before assigning any values or invoking any methods using this particular Object. Proper Null checks corresponding to an object will avoid the least possibility of a Null Pointer Exception.<br>Also checking for Null after the usage of this object is meaningless and this will also gives us a SONAR violation. So make sure proper Null check is done even before it is used any where else in the code.<br><br>Ex: Wrong practise <br><br> public void test1(object A){<br>         String str = A.getMessage();<br>           if(null != A){<br>                 newMethod();<br>           }<br>}<br>  Right Method<br>      public void test1(object A){<br>            if(null != A){ <br>                   String str = A.getMessage();<br>                    newMethod();<br>            }<br>}",
+		"Comments": "Have null checks to avoid the possibility of NullPointerException"
+	}],
+	"Reusability":[{
+		"Checks": "Is there any reusable code? Move reusable code to utility classes.",
+		"Severity": "Major",
+		"Example": "public class TestUtil{<br>    public static Timestamp getTimestamp(Date date) {<br>     return new Timestamp(date.getTime());<br>}<br>}<br><br><br><br>class A {<br>    public void m1() {<br> //Timestamp  t = new Timestamp(date.getTime());<br>  TestUtil.getTimestamp(date.getTime());<br>    }<br>}<br><br><br>class B {<br>    public void m2() {<br> //Timestamp  t = new Timestamp(date.getTime());<br>  TestUtil.getTimestamp(date.getTime());<br>    }<br>}",
+		"Comments": "All reusable codes should be moved to Tools/Utility class."
+	}],
+	"Performance":[{
+		"Checks": "Avoid unnecessary casts",
+		"Severity": "Critical",
+		"Example": "Declaring the HashTable, HashMap etc in a generalised form will cause the Key, Value pairs to be set to the default values. Hence using them requires unnecessary type casting.<br>Inorder to avoid such issues use specific declarations.<br>Ex:  private HashTable table = new HashTable();<br>        table.put(new String(\"A\") , new Integer(10));<br>       Integer i = (Integer)table.get(\"A\");<br>     return i.intValue();<br> Instead:<br>        private HashTable<String, Integer> table = new HashTable<String, Integer>();<br>        table.put(\"A\",10);<br>        Integer i = table.get(\"A\");<br>        return i;<br>",
+		"Comments": "NA"
+	},
+	{
+		"Checks": "Eliminate repeated casts by casting once and holding the cast item in a correctly typed variable.",
+		"Severity": "Critical",
+		"Example": "Instead of using the cast repeatedly, which is very costly , we can properly save it to a correctly typed variable so that it can be reused.",
+		"Comments": "NA"
+	},{
+		"Checks": "Eliminate unnecessary repeated method calls from loops",
+		"Severity": "Critical",
+		"Example": "for (int i = 0; i < x.length; i++)<br>    x[i] *= Math.PI * Math.cos(y);<br>As in above given code result of \"x.lenght\" doesn't change, or is invariant. The code is moved so that it only executes when the result may change, rather than executing each time the result is required.<br>int len=x.lenght; <br>for (int i = 0; i <len; i++)<br>    x[i] *= Math.PI * Math.cos(y);",
+		"Comments": "NA"
+	}]
+}

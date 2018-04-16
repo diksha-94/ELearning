@@ -1,0 +1,135 @@
+{
+    "id": "emi",
+    "name": "Assortments & Shippers",
+    "description": "So, please check your level of learning in Assortments & Shippers section !!",
+    "passPercentage": "90",
+    "mode": "wizard",
+    "questions":[
+        {
+            "id": 1,
+            "type": "multipleChoice",
+            "question": "What would you use to order when you have items that are either completely different or when you have similar items that are required in definite quantities ?",
+            "options": [
+                {"id": 1, "text": "Assortments"},
+                {"id": 2, "text": "Shippers"},
+                {"id": 3, "text": "Cross Referencing"},
+                {"id": 4, "text": "None of the above"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+        {
+            "id": 2,
+            "type": "multipleChoice",
+            "question": "What would you use to order when you have similar items  with different UPC that have the same cost and retail ?",
+            "options": [
+                {"id": 1, "text": "Assortments"},
+                {"id": 2, "text": "Shippers"},
+                {"id": 3, "text": "Cross Referencing"},
+                {"id": 4, "text": "None of the above"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 3,
+            "type": "multipleChoice",
+            "question": "What are the items that are created as a part of the assortment but do not sell at the register called ?",
+            "options": [
+                {"id": 1, "text": "Non orderable Items"},
+                {"id": 2, "text": "Content Items"},
+                {"id": 3, "text": "Parent"},
+                {"id": 4, "text": "Prime"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 4,
+            "type": "multipleChoice",
+            "question": "The on-hands and on-orders of the items in an assortment can be viewed at child item level. True or False.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+        {
+            "id": 5,
+            "type": "multipleChoice",
+            "question": "The on-hands and on-orders of the items in a shipper can be seen at child item level. True or False.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 6,
+            "type": "multipleChoice",
+            "question": "Which of the following statement about Assortment child items is False ?",
+            "options": [
+                {"id": 1, "text": "Always Replenishable"},
+                {"id": 2, "text": "Always have the same cost"},
+                {"id": 3, "text": "Always have the same retail"},
+                {"id": 4, "text": "All the above are false"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 7,
+            "type": "multipleChoice",
+            "question": "Which of the following statements about Shipper content items is True ?",
+            "options": [
+                {"id": 1, "text":  "Replenishable or Non Replenishable"},
+                {"id": 2, "text":  "Same or different cost"},
+                {"id": 3, "text":  "Same or different retails"},
+                {"id": 4, "text":  "All of the above"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 8,
+            "type": "multipleChoice",
+            "question": "There are 12 child items retailing at $2 each in an assortment. What will be the unit retail of the assortment ?",
+            "options": [
+                {"id": 1, "text":  "$24"},
+                {"id": 2, "text":  "$12"},
+                {"id": 3, "text":  "$2"},
+                {"id": 4, "text":  "$10"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 9,
+            "type": "multipleChoice",
+            "question": "There are 3 content items retailing at $2, $4 and $1 each in shipper. What will be the retail cost of the shipper?",
+            "options": [
+                {"id": 1, "text":  "$2"},
+                {"id": 2, "text":  "$4"},
+                {"id": 3, "text":  "$1"},
+                {"id": 4, "text":  "$7"}
+            ],
+            "answer": 4,
+            "score": 1
+        },
+		    {
+            "id": 10,
+            "type": "multipleChoice",
+            "question": "There are 3 content items retailing at $2, $4 and $1 each in shipper. What will be the retail cost of the shipper?",
+            "options": [
+                {"id": 1, "text":  "$2"},
+                {"id": 2, "text":  "$4"},
+                {"id": 3, "text":  "$1"},
+                {"id": 4, "text":  "$7"}
+            ],
+            "answer": 4,
+            "score": 1
+        }
+    ]
+}

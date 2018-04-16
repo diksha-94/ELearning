@@ -1,0 +1,108 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="course_details_container">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3 class="text-format">Assortment vs Shipper</h3>
+            <table id="t01">
+              <tr>
+                <th id="t01">Assortment</th>
+                <th id="t01">Shipper</th>
+              </tr>
+
+              <tr>
+                <td id="t01"><b>Assortment</b> - Items in box are interchangeable and do not ship on their own - ever!
+                </td>
+                <td id="t01"><b>Shipper</b> - Items in box have defined quantites which are shipped every time, but
+                  often ship on their own
+                </td>
+              </tr>
+
+              <tr>
+                <td id="t01"><b>Each child in an Assortment will:</b>
+                  <ul>
+                    <li>Have a different UPC Number</li>
+                    <li>Have the same Cost, Retail & Pack</li>
+                    <li>Be a non-replenishable Item</li>
+                  </ul>
+                </td>
+
+                <td id="t01"><b>Each content item in a Shipper will:</b>
+                  <ul>
+                    <li>Have a different UPC Number</li>
+                    <li>Can be a Different Cost, Retail and/or Pack</li>
+                    <li>Can be the Same Cost, Retail and/or Pack</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td id="t01"><b>Parent must be created as follows:</b>
+                  <ul>
+                    <li>In Online Item File - Create Assortment</li>
+                    <li>Replenishable or Non Replenishable</li>
+                    <li>Pack size: total quantity of assortment</li>
+                  </ul>
+                </td>
+
+                <td id="t01"><b>Prime must be created as follows:</b>
+                  <ul>
+                    <li>In Online Item File - Create Shipper</li>
+                    <li> Non Replenishable Only</li>
+                    <li> Pack size: Could be break pack or case pack</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td id="t01">Total Cost of Assortment (same unit cost as a child item)</td>
+                <td id="t01">Total Cost of the Shipper (for case and unit)</td>
+              </tr>
+
+              <tr>
+                <td id="t01">Unit Retail of one Child Item</td>
+                <td id="t01">Total Retail of the Shipper</td>
+              </tr>
+
+              <tr>
+                <td id="t01"><b>Each child must meet below criteria: </b>
+                  <ul>
+                    <li>Non Replenishable only</li>
+                    <li>Supplier Pack = 1; Warehouse Pack = 1</li>
+                  </ul>
+                </td>
+
+                <td id="t01"><b>Each content item must meet below criteria:</b>
+                  <ul>
+                    <li>Replenishable or Non Replenishable</li>
+                    <li>Pack quantity as normal</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td id="t01"><b>Reporting & Visibility:</b>
+                  <ul>
+                    <li>Assortment Parent holds on-hands, on-orders, & sales for all child items</li>
+                    <li>Parent/Children viewed in Assortment Inquiry</li>
+                  </ul>
+                </td>
+
+                <td id="t01"><b>Reporting & Visibility:</b>
+                  <ul>
+                    <li>Content Items hold individual on-hands, on-orders, & sales</li>
+                    <li>Prime/Content items viewed in Shipper Inquiry</li>
+                  </ul>
+                </td>
+              </tr>
+
+			  
+			  
+            </table>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

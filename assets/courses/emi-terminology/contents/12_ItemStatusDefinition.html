@@ -1,0 +1,90 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="course_details_container">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3 class="text-format">Item Status Definitions</h3>
+
+          <p>The status of an item will determine how it can be used by merchandising
+            and replenishment teams besides when the item can be eliminated from WM system
+            <ul>
+          <p>
+          <li><b>Active -</b> An item in active status is available for the buying
+            office and replenishment systems to place orders. It also allows a store
+            to receive the product.
+          </li>
+
+          <p>
+          <li><b>Deleted -</b> If an item is changed to deleted status, replenishment
+            is shut off and stores will be unable to receive orders. After <b>90 days</b>
+            of deletion status, the system will review it for activity and purge if it
+            meets certain qualifications defined in the purge process.
+          </li>
+
+          <p>
+          <li><b>Inactive - </b> If an item is changed to inactive status, replenishment
+            is shut off and stores will be unable to receive orders. The system will not
+            try to purge an inactive item until <b>13 months</b> after the status change
+            was applied. This status is used on most seasonal items so the item number
+            can be retained for warehouse history movement
+          </li>
+
+          <p>
+          <li><b>CWO Flag - </b> The Cancel When Out (CWO) flag sets
+            up an automatic deletion process on warehouse type items. When the CWO flag
+              is set to 'Y', the system will stop the inbound orders to the distribution
+            centers (DCs) while still allowing the stores to pull from their appropriate DC.
+            When the quantities are cleared from all the warehouse slots the item will
+            automatically flip to deleted status
+          </li>
+
+          <p>
+          <li><b>Expiration Date -</b> The expiration date sets a specific future date
+            in which the item is inactivated and deleted. When the expiration date is
+            reached, the system will put the item into "Inactive" status for 90 days
+            and then change to "Deleted" status
+          </li>
+          </ul></p>
+
+		  <p><h4 class="text-format">Purged</h4>
+
+          The <b>purge process</b> is used to clean up the item file. After the item is purged,
+          it cannot be scanned or ordered at store level. When the item meets the criteria of
+          the Deletion or Inactivation process the system will determine if there has been
+          activity on an item.
+          <ul>
+            <p>
+            <li><b>No Activity -</b> If there has not been any activity the item will be
+              purged from the system and it will no longer be visible in OIF, HOST, or
+              store systems. However, queries can still be pulled from Retail Link to
+              gather sales data
+            </li>
+
+            <p>
+            <li><b>Activity -</b> If the item had activities in the last 30 days it will
+              remain "on file" in OIF, HOST, and store systems. The system looks at the item
+              every week and purges it when there has been no activity for that week
+            </li>
+          </ul>
+		 
+          <!-- <p><h4 class="text-format">Purged</h4>
+
+          The <b>purge process</b> is used to clean up the item file.  After the item is purged,
+          it cannot be scanned or ordered at store level.  When the item meets the criteria of
+          the Deletion or Inactivation process the system will determine if there has been
+          activity on an item.
+          <ul>
+              <p><li><b>No Activity -</b> If there has not been any activity the item will be
+              purged from the system and it will no longer be visible in OIF, HOST, or
+              store systems. However, queries can still be pulled from Retail Link to
+              gather sales data</li>
+
+              <p><li><b>Activity -</b>  If the item had activities in the last 30 days it will
+              remain "on file" in OIF, HOST, and store systems. The system looks at the item
+              every week and purges it when there has been no activity for that week</li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

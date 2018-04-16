@@ -1,0 +1,114 @@
+{
+  "id": "walmart-stores-itemCreation",
+  "name": "Walmart Stores Item Creation - Current State",
+  "duration": 30,
+  "url": "contents/intro.html",
+  "type": "page",
+  "assets": null,
+  "quiz": {
+    "id": "6",
+    "name": "Q&A",
+    "duration": 300,
+    "url": "contents/quiz.json"
+  },
+  "chapters": [
+    {
+      "id": "1",
+      "name": "Item Creation",
+      "duration": 60,
+      "url": "contents/1_ItemCreation.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "2",
+      "name": "Single Item Creation",
+      "duration": 60,
+      "url": "contents/2_SingleItemCreation.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "item1",
+          "value": "contents/assets/itemCreation1.png"
+        }
+      ],
+      "chapters": [
+        {
+          "id": "2.1",
+          "name": "Copy Function & Manual Process",
+          "duration": 60,
+          "url": "contents/Copy&Manual.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "item2",
+              "value": "contents/assets/itemCreation2.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "2.2",
+          "name": "Process Completion",
+          "duration": 60,
+          "url": "contents/singleitemcreation_continuation.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Mass Item Creation",
+      "duration": 60,
+      "url": "contents/3_MassItemCreation.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "4",
+      "name": "Supplier Quote Process-via System",
+      "duration": 60,
+      "url": "contents/4_SupplierQuoteProcess.html",
+      "assets": [
+        {
+          "key": "item3",
+          "value": "contents/assets/itemCreation3.png"
+        }
+      ],
+      "type": "page",
+      "chapters": null
+    },
+    {
+      "id": "5",
+      "name": "Supplier Quote Process-manually",
+      "duration": 60,
+      "url": "contents/supplierquoteprocess_manually.html",
+      "assets": [
+        {
+          "key": "item4",
+          "value": "contents/assets/itemCreation4.png"
+        }
+      ],
+      "type": "page",
+      "chapters": null
+    },
+    {
+      "id": "5",
+      "name": "Data Sync Process",
+      "duration": 60,
+      "url": "contents/5_DataSyncProcess.html",
+      "assets": [
+        {
+          "key": "gtin",
+          "value": "contents/assets/gtin.png"
+        }
+      ],
+      "type": "page",
+      "chapters": null
+    }
+  ]
+}

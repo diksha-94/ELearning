@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="course_details_container">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3 class="text-format">UPC</h3>
+          <p>The UPC is the barcode representation of the GTIN 12 which
+            consist of 12 numeric characters which can uniquely identity a
+            company's individual product. The main purpose of UPC is used for
+            scanning of trade items at the point of sales.</p>
+
+          <b>Data structure of UPC:</b>
+          <p>The first either 6 to 9 nine digit in a UPC is referred as
+            company prefix assigned by the GS1 and this uniquely identifies the
+            company and this remain constant as per the GS1 standards.</p>
+
+          <p>The next set of digit is the product number and uniquely
+            identifies the individual items. The last digit is check digit based
+            on the mathematical calculation of the first 11 digit.</p>
+        
+          <center>
+            <img ng-src="{{course.assets.upcSymbol}}" width="350px"/>
+          </center>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

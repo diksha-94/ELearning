@@ -1,0 +1,184 @@
+{
+    "id": "emi",
+    "name": "EMI Terminology",
+    "description": "So, please check your level of learning in EMI Terminology section !!",
+    "passPercentage": "90",
+    "mode": "wizard",
+    "questions":[
+        {
+            "id": 1,
+            "type": "multipleChoice",
+            "question": "What does GDSN stand for ?",
+            "options": [
+                {"id": 1, "text": "Global Data Synchronisation Node"},
+                {"id": 2, "text": "Global Data Supplier Network"},
+                {"id": 3, "text": "Global Data Synchronisation Network"},
+                {"id": 4, "text": "Global Direct Synchronisation Network"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 2,
+            "type": "multipleChoice",
+            "question": "Which among the below are benefits of GDSN ?",
+            "options": [
+                {"id": 1, "text": "Item accuracy"},
+                {"id": 2, "text": "Speed to the market"},
+                {"id": 3, "text": "Reduced Operational cost"},
+                {"id": 4, "text": "All of the above"}
+            ],
+            "answer": 4,
+            "score": 1
+        },
+        {
+            "id": 3,
+            "type": "multipleChoice",
+            "question": "What are the different Item types used in Walmart ?",
+            "options": [
+                {"id": 1, "text": "Core Product , Product, Offering, Trade Item, and Shippers"},
+                {"id": 2, "text": "DSD, Non Replenishable, Assembly Replenishable and Warehouse  Replenishable"},
+                {"id": 3, "text": "Replenishable, Non Replenishable"},
+                {"id": 4, "text": "DSD, Assembly, Warehouse, Assortments  and Non Replenishable"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+        {
+            "id": 4,
+            "type": "multipleChoice",
+            "question": "What are the Item types for 'Non Replenishable' ?",
+            "options": [
+                {"id": 1, "text": "Item type : 3, 43 & 07"},
+                {"id": 2, "text": "Item type : 33, 42 & 47"},
+                {"id": 3, "text": "Item type : 32, 40 & 37"},
+                {"id": 4, "text": "Item type : 33, 44 & 38"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+		    {
+            "id": 5,
+            "type": "multipleChoice",
+            "question": "What are the Item types for 'Warehouse Replenishable' ?",
+            "options": [
+                {"id": 1, "text": "Item type : 3 and 43"},
+                {"id": 2, "text": "Item type : 20, 22 & 47"},
+                {"id": 3, "text": "Item type : 20, 22, 40 & 42"},
+                {"id": 4, "text": "Item type : 33, 44 & 38"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 6,
+            "type": "multipleChoice",
+            "question": "'12th character' of UPC is the Check digit. True or False ?",
+            "options": [
+                {"id": 1, "text": "True"},
+                {"id": 2, "text": "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 7,
+            "type": "multipleChoice",
+            "question": "Six digit Supplier Number is assigned by  ______ Team of Walmart.",
+            "options": [
+                {"id": 1, "text": "Buying"},
+                {"id": 2, "text": "Replenishment"},
+                {"id": 3, "text": "Vendor Master"},
+                {"id": 4, "text": "Order Specialist"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 8,
+            "type": "multipleChoice",
+            "question": "Walmart item number is used to write purchase orders and receive merchandise in to the stores ,track sales and on-hands. True or False ?",
+            "options": [
+                {"id": 1, "text": "True"},
+                {"id": 2, "text": "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 9,
+            "type": "multipleChoice",
+            "question": "Vendor Pack Quantity is the total amount of units in the box that ships from the supplier",
+            "options": [
+                {"id": 1, "text": "False"},
+                {"id": 2, "text": "True"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+        {
+            "id": 10,
+            "type": "multipleChoice",
+            "question": "What are the different item status ?",
+            "options": [
+                {"id": 1, "text": "Active, Deleted"},
+                {"id": 2, "text": "Active, Inactive and Deleted"},
+                {"id": 3, "text": "Active, Inactive"},
+                {"id": 4, "text": "None of the above"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+        {
+            "id": 11,
+            "type": "multipleChoice",
+            "question": "When the CWO flag is set to 'Y', the system will continue the in- bound orders to the DC. True or False ?",
+            "options": [
+                {"id": 1, "text": "True"},
+                {"id": 2, "text": "False"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+        {
+            "id": 12,
+            "type": "multipleChoice",
+            "question": "When the Expiration date is reached, the system will put the item into inactive status for ________.",
+            "options": [
+                {"id": 1, "text": "30 days"},
+                {"id": 2, "text": "60 days"},
+                {"id": 3, "text": "90 days"},
+                {"id": 4, "text": "120 days"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 13,
+            "type": "multipleChoice",
+            "question": "If an item is Purged, which of the following is true?",
+            "options": [
+                {"id": 1, "text": "It will only be visible in OIF and Store Systems"},
+                {"id": 2, "text": "It will only be visible in HOST"},
+                {"id": 3, "text": "It will be deleted only from OIF and Store Systems"},
+                {"id": 4, "text": "It will no longer be visible in OIF, HOST and Store Systems"}
+            ],
+            "answer": 4,
+            "score": 1
+        },
+		    {
+            "id": 14,
+            "type": "multipleChoice",
+            "question": "The system will not try to purge an inactive item until _____  after the status is changed to inactive.",
+            "options": [
+                {"id": 1, "text": "13 months"},
+                {"id": 2, "text": "30 days"},
+                {"id": 3, "text": "13 weeks"},
+                {"id": 4, "text": "90 days"}
+            ],
+            "answer": 1,
+            "score": 1
+        }
+
+    ]
+}

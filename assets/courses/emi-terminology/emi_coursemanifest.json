@@ -1,0 +1,243 @@
+{
+  "id": "emi-terminology",
+  "name": "EMI - Terminologies",
+  "duration": 30,
+  "url": "contents/emi_objective.html",
+  "type": "page",
+  "assets": null,
+  "quiz":{
+    "id": "13",
+    "name": "Q&A",
+    "duration": 300,
+    "url": "contents/quiz.json"
+  },
+  "chapters": [
+    {
+      "id": "1",
+      "name": "EMI",
+      "duration": 60,
+      "url": "contents/1_EmiTerminology.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "2",
+      "name": "GS1 & DSV",
+      "duration": 60,
+      "url": "contents/2_GS1.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "3",
+      "name": "GDSN",
+      "duration": 60,
+      "url": "contents/3_GDSN.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "gdsn",
+          "value": "contents/assets/gdsn.jpg"
+        }
+      ],
+      "chapters": [
+        {
+          "id": "3.1",
+          "name": "GDSN (Cont'd)",
+          "duration": 60,
+          "url": "contents/GDSN_continuation.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "3.2",
+          "name": "GDSN Benefits",
+          "duration": 60,
+          "url": "contents/GDSN_Benefits.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "GTIN",
+      "duration": 60,
+      "url": "contents/5_GTIN.html",
+      "type": "page",
+      "assets": null,
+      "chapters": [
+        {
+          "id": "4.1",
+          "name": "GTIN (Cont'd)",
+          "duration": 60,
+          "url": "contents/GTINContinuation.html",
+          "assets": null,
+          "type": "page",
+          "chapters": null
+        },
+        {
+          "id": "4.2",
+          "name": "GTIN Benefits",
+          "duration": 60,
+          "url": "contents/6_GTINBenefits.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "UPC",
+      "duration": 60,
+      "url": "contents/4_UPC.html",
+      "assets": [
+        {
+          "key": "upcSymbol",
+          "value": "contents/assets/upcSymbol.png"
+        }
+      ],
+      "type": "page",
+      "chapters": null
+    },
+    {
+      "id": "6",
+      "name": "GLN",
+      "duration": 60,
+      "url": "contents/7_GLN.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "gln",
+          "value": "contents/assets/gln.png"
+        }
+      ],
+      "chapters": null
+    },
+    {
+      "id": "7",
+      "name": "Item Number and Type",
+      "duration": 60,
+      "url": "contents/8_ItemType.html",
+      "type": "page",
+      "assets": null,
+      "chapters": [
+        {
+          "id": "7.1",
+          "name": "Item Type (Cont'd)",
+          "duration": 60,
+          "url": "contents/ItemType.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "ItemType",
+              "value": "contents/assets/ItemType.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "7.2",
+          "name": "DSD And Non-Replenishable",
+          "duration": 60,
+          "url": "contents/PrimaryItemTypes.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "itemtype1",
+              "value": "contents/assets/itemtype1.png"
+            },
+            {
+              "key": "itemtype2",
+              "value": "contents/assets/itemtype2.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "7.3",
+          "name": "Assembly And Warehouse",
+          "duration": 60,
+          "url": "contents/ItemTypes_3&4.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "itemtype3",
+              "value": "contents/assets/itemtype3.png"
+            },
+            {
+              "key": "itemtype4",
+              "value": "contents/assets/itemtype4.png"
+            }
+          ],
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Supplier Number",
+      "duration": 60,
+      "url": "contents/9_SupplierNumber.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "9",
+      "name": "Item Pack Quantity",
+      "duration": 60,
+      "url": "contents/11_ItemPackQuantity.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "ItemPack",
+          "value": "contents/assets/ItemPack.jpg"
+        }
+      ],
+      "chapters": null
+    },
+    {
+      "id": "10",
+      "name": "Item Status Definitions",
+      "duration": 60,
+      "url": "contents/12_ItemStatusDefinition.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "11",
+      "name": "Assortment and Shipper",
+      "duration": 60,
+      "url": "contents/13_AssortmentAndShipper.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "Assortment",
+          "value": "contents/assets/Assortment.jpg"
+        },
+        {
+          "key": "Shipper",
+          "value": "contents/assets/Shipper.jpg"
+        }
+      ],
+      "chapters": [
+        {
+          "id": "11.1",
+          "name": "Assortment and Shipper (Cont'd)",
+          "duration": 60,
+          "url": "contents/AssortmentAndShipperContd.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        }
+      ]
+    }
+  ]
+}

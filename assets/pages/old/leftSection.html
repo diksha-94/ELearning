@@ -1,0 +1,46 @@
+<!--<button type="button" class="glyphicon glyphicon-align-justify" data-toggle="tooltip" title="Menu" ng-click="panelClick()">
+    <span class="hamb-top"></span>
+    <span class="hamb-middle"></span>
+    <span class="hamb-bottom"></span>
+</button>
+
+<div class="logoutButton" ng-if="application.launchMode.isEnabled">
+    <button type="button" class="btn btn-warning" onclick="window.location.href='login_page.html'">Logout</button>
+</div>
+
+<div class="logoutButton" ng-if="application.courseMode.isEnabled">
+    <button type="button" class="btn btn-warning" ng-click="exitClick()">Exit</button>
+</div>
+
+<div class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper">
+    <div style="overflow-y: auto; overflow-x: hidden; height:100%;" ng-if="application.courseMode.isEnabled">
+        <div class="panel panel-default">
+            <div class="checkbox pull-right">
+                <label>
+                    <input type="checkbox" ng-model="course.autoPlay" />
+                    Auto-play
+                </label>
+                <md-switch ng-model="course.autoPlay">
+                    Auto-play
+                </md-switch>
+            </div>
+        </div>
+        <div>
+            <div
+                    data-angular-treeview="true"
+                    data-tree-id="cTree"
+                    data-tree-model="[course.manifest]"
+                    data-node-label="name"
+                    data-node-children="chapters"></div>
+        </div>
+
+    </div>
+</div>-->
+<div>
+    <div
+            data-angular-treeview="true"
+            data-tree-id="cTree"
+            data-tree-model="[course.manifest]"
+            data-node-label="name"
+            data-node-children="chapters"></div>
+</div>

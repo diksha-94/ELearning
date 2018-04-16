@@ -1,0 +1,68 @@
+div[data-angular-treeview] {/* prevent user selection */
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;/* default */
+  color: black;
+  text-decoration: none;
+}
+
+div[data-tree-model] ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  overflow: hidden;
+  color: #fff;
+}
+
+div[data-tree-model] li {
+  position: relative;
+  /*padding: 0 0 0 10px;*/
+  line-height: 25px;
+}
+
+div[data-tree-model] li .expanded {
+  padding: 1px 10px;
+  background-image: url("../images/icons/expand-small.svg");
+  background-repeat: no-repeat;
+}
+
+div[data-tree-model] li .collapsed {
+  padding: 1px 10px;
+  background-image: url("../images/icons/right-small.svg");
+  background-repeat: no-repeat;
+}
+
+div[data-tree-model] li .normal {
+  padding: 1px 14px;
+  background-repeat: no-repeat;
+}
+
+div[data-tree-model] li i, div[data-tree-model] li span {
+  padding: 0 11px 0 3px;
+  cursor: pointer;
+}
+
+
+div[data-tree-model] li .selected {
+    background-color: #134771;
+    /* background-color: transparent; */
+    font-weight: bold;
+}
+
+.border-line {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;;
+}
+
+.parentNode {
+  background: #0F4F8C;
+}
+
+.wrapText {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

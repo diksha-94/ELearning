@@ -1,0 +1,361 @@
+{
+  "Sno": 3,
+  "id": "assortment-shippers",
+  "name": "Assortment & Shipper",
+  "duration": 30,
+  "url": "contents/assortment_shipper_intro.html",
+  "type": "page",
+  "assets": null,
+  "quiz": {
+    "id": "8",
+    "name": "Q&A",
+    "duration": 300,
+    "url": "contents/quiz.json"
+  },
+  "chapters": [
+    {
+      "id": "1",
+      "name": "Introduction",
+      "duration": 60,
+      "url": "contents/1_AssortmentAndShippers.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "assort",
+          "value": "contents/assets/assort.png"
+        },
+        {
+          "key": "ship",
+          "value": "contents/assets/ship.png"
+        }
+      ],
+      "chapters": [
+        {
+          "id": "1.1",
+          "name": "Framework",
+          "duration": 60,
+          "url": "contents/2_Framework.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Assortment",
+      "duration": 60,
+      "url": "contents/intro_assortment.html",
+      "type": "page",
+      "assets": null,
+      "chapters": [
+        {
+          "id": "2.1",
+          "name": "Criteria for choosing an assortment",
+          "duration": 60,
+          "url": "contents/3_CriteriaAssortment.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "2.2",
+          "name": "Results of using an assortment",
+          "duration": 60,
+          "url": "contents/4_ResultsAssortment.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "stake",
+              "value": "contents/assets/stake.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "2.3",
+          "name": "Assortment - Best Practices",
+          "duration": 60,
+          "url": "contents/5_AssortmentPractices.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "2.4",
+          "name": "Assortment - Best Practices (Cont'd)",
+          "duration": 60,
+          "url": "contents/assortmnet_childitems.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "assortment_practice",
+              "value": "contents/assets/ap.png"
+            }
+          ],
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Shipper",
+      "duration": 60,
+      "url": "contents/intro_shipper.html",
+      "type": "page",
+      "assets": null,
+      "chapters": [
+        {
+          "id": "3.1",
+          "name": "Criteria for choosing a shipper",
+          "duration": 60,
+          "url": "contents/6_CriteriaShipper.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "3.2",
+          "name": "Results of using a shipper",
+          "duration": 60,
+          "url": "contents/7_ResultsShipper.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "stake",
+              "value": "contents/assets/stake.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "3.3",
+          "name": "Shipper - Best Practices",
+          "duration": 60,
+          "url": "contents/8_ShipperPractices.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "3.4",
+          "name": "Shipper - Best Practices (Cont'd)",
+          "duration": 60,
+          "url": "contents/Bestpractices_shipper.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "shipper",
+              "value": "contents/assets/sh.png"
+            }
+          ],
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Assortment vs Shipper",
+      "duration": 60,
+      "url": "contents/9_Comparision.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "5",
+      "name": "Assortment Creation in EMI - Step-1",
+      "duration": 60,
+      "url": "contents/10_AssortmentCreation.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "step1",
+          "value": "contents/assets/step1.png"
+        }
+      ],
+      "chapters": [
+        {
+          "id": "5.1",
+          "name": "Step-2",
+          "duration": 60,
+          "url": "contents/10.1_AssortmentCreation.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "step2",
+              "value": "contents/assets/step2.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "5.2",
+          "name": "Step-3",
+          "duration": 60,
+          "url": "contents/10.2_AssortmentCreation.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "example1",
+              "value": "contents/assets/stepAssortment1.png"
+            },
+            {
+              "key": "example2",
+              "value": "contents/assets/stepAssortment2.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "5.3",
+          "name": "Step-4",
+          "duration": 60,
+          "url": "contents/10.3_AssortmentCreation.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "step4",
+              "value": "contents/assets/step4.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "5.4",
+          "name": "Step-5",
+          "duration": 60,
+          "url": "contents/10.4_AssortmentCreation.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "step5",
+              "value": "contents/assets/step5.png"
+            }
+          ],
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Shipper Creation in EMI - Step-1",
+      "duration": 60,
+      "url": "contents/11_ShipperCreation.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "stepShipper1",
+          "value": "contents/assets/stepCreation1.png"
+        }
+      ],
+      "chapters": [
+        {
+          "id": "6.1",
+          "name": "Step-2",
+          "duration": 60,
+          "url": "contents/11.1_ShipperCreation.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "stepShipper2",
+              "value": "contents/assets/stepCreation2.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "6.2",
+          "name": "Step-3",
+          "duration": 60,
+          "url": "contents/11.2_ShipperCreation.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "stepShipper31",
+              "value": "contents/assets/stepCreation31.png"
+            },
+            {
+              "key": "stepShipper32",
+              "value": "contents/assets/stepCreation32.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "6.3",
+          "name": "Step-4",
+          "duration": 60,
+          "url": "contents/11.3_ShipperCreation.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "stepShipper41",
+              "value": "contents/assets/stepCreation41.png"
+            },
+            {
+              "key": "stepShipper42",
+              "value": "contents/assets/stepCreation42.png"
+            },
+            {
+              "key": "stepShipper43",
+              "value": "contents/assets/stepCreation43.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "6.4",
+          "name": "Step-5",
+          "duration": 60,
+          "url": "contents/11.4_ShipperCreation.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "stepShipper5",
+              "value": "contents/assets/stepCreation5.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "6.5",
+          "name": "Step-6",
+          "duration": 60,
+          "url": "contents/11.5_ShipperCreation.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "stepShipper6",
+              "value": "contents/assets/stepCreation6.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "6.6",
+          "name": "Step-7",
+          "duration": 60,
+          "url": "contents/11.6_ShipperCreation.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "stepShipper7",
+              "value": "contents/assets/stepCreation7.png"
+            }
+          ],
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Glossary",
+      "duration": 30,
+      "url": "contents/12_Glossary.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    }
+  ]
+}

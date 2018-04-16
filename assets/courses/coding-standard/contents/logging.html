@@ -1,0 +1,52 @@
+<div id="page-content-wrapper">
+
+<h3 class="text-format">LOGGING</h3>	
+
+<div>
+	<table class="severitycls">
+		<tr class="severitycls">
+			<th class="severitycls"><span class="testclass2"> &#9978;
+					Critical</span></th>
+			<th class="severitycls"><span class="testclass"> &#9978;
+					Major</span></th>
+			<th class="severitycls"><span class="testclass3"> &#9978;
+					Medium</span></th>
+			<th class="severitycls"><span class="testclass4"> &#9978;
+					Minor</span></th>
+		</tr>
+	</table>
+</div>
+
+<table id="t01">
+<tr>
+<th id="t01">Checks</th>
+<th id="t01">Comments</th>
+</tr>
+
+<tr style="color: red">
+<td id="t01">Are there enough logDebug messages in code?</td>
+<td id="t01">There should be enough debug statements in the code to trace the flow which will be helpful in UAT or Production environments to resolve the issue.</td>
+</tr>
+
+<tr style="color: brown">
+<td id="t01">Level of loggings and meaningful logger statements</td>
+<td id="t01">NA</td>
+</tr>
+
+<tr style="color: brown">
+<td id="t01">Know what is being logged. Avoid NPEs</td>
+<td id="t01">log.debug(Processing request with id: {}, request.getId()); This can cause an NPE.</td>
+</tr>
+
+<tr style="color: blue">
+<td id="t01">Be concise and descriptive while logging messages</td>
+<td id="t01">Each logging statement should contain both data and description. log.debug(Message with id '{}' processed, message.getJMSMessageID());This uses SLf4J logging framework, by far the best framework</td>
+</tr>
+
+<tr style="color: blue">
+<td id="t01">Log exceptions properly</td>
+<td id="t01">log.error(Error reading config file, e); Don't include exception message, as it will be printed automatically after the log statement, preceding stack trace. But in order to do so, you must pass the exception itself as the second argument.</td>
+</tr>
+
+</table>
+</div>

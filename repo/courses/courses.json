@@ -1,0 +1,7 @@
+[
+	{"id":"walmart-emi", "name":"Walmart & EMI Introduction", "type":"domain", "manifest": "walmart-emi/coursemanifest.json", "description": " Walmart operates over 11,000 retail units under 71 banners in 27 countries and e-commerce websites in 11 countries.It employs 2.2 million associates..."},
+	{"id":"emi-terminology", "name":"EMI - Terminologies", "type":"domain", "manifest": "emi-terminology/emi_coursemanifest.json", "description":"Every merchandise item in Walmart is identified by a unique number  - Walmart item number. It can vary between 6 to 9 digits. Every piece of merchandise..."},
+	{"id":"assortment-shippers", "name":"Assortment & Shipper", "type":"domain", "manifest": "assortment-shippers/assortment_coursemanifest.json", "description":"Assortments and shippers allow multiple items with different UPC codes to be grouped together for shipping and/or ordering..."},
+	{"id":"walmart-stores-department&roles", "name":"Walmart Stores - Departments and Roles", "type":"domain", "manifest": "walmart-stores-department&roles/walmart-departments_coursemanifest.json", "description":"Walmart is supported by Merchandising and Operations team to get the products to customer in Store..."},
+	{"id":"walmart-stores-itemCreation", "name":"Walmart Stores Item Creation - Current State", "type":"domain", "manifest": "walmart-stores-itemCreation/walmart-itemCreation_coursemanifest.json", "description":"Once the proposed assortments are reviewed and approved by the Leadership Team for any Buy Season..."}
+]

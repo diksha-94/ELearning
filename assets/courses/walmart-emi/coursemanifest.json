@@ -1,0 +1,250 @@
+{
+  "id": "walmart-emi",
+  "name": "Walmart & EMI Introduction",
+  "duration": 30,
+  "url": "contents/intro.html",
+  "type": "intro-page",
+  "assets": null,
+  "quiz": {
+    "id": "5",
+    "name": "Q&A",
+    "duration": 300,
+    "url": "contents/quiz.json"
+  },
+  "chapters": [
+    {
+      "id": "1",
+      "name": "Walmart",
+      "duration": 60,
+      "url": "contents/1-walmart.html",
+      "type": "page",
+      "assets": null,
+      "chapters": [
+        {
+          "id": "1.1",
+          "name": "Walmart US",
+          "duration": 90,
+          "url": "contents/2-walmart-us.html",
+          "type": "page",
+          "audio": {
+            "key": "chapter2"
+          },
+          "assets": [
+            {
+              "key": "chapter2",
+              "value": "contents/assets/chapter2.mp3"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "1.2",
+          "name": "Walmart International & Sam's Club",
+          "duration": 60,
+          "url": "contents/3-walmart-international.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "1.3",
+          "name": "Walmart Global E-Commerce",
+          "duration": 60,
+          "url": "contents/4-walmart-gec.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "EMI Introduction",
+      "duration": 60,
+      "url": "contents/5-emi.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "emi1",
+          "value": "contents/assets/emi1.png"
+        }
+      ],
+      "chapters": [
+        {
+          "id": "2.1",
+          "name": "Benefits",
+          "duration": 60,
+          "url": "contents/6-emi-benefits.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "2.2",
+          "name": "Stakeholders",
+          "duration": 60,
+          "url": "contents/7-emi-stakeholders.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "stake",
+              "value": "contents/assets/stake.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "2.3",
+          "name": "Workflow",
+          "duration": 60,
+          "url": "contents/8-workflow.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "wfcurrent",
+              "value": "contents/assets/wfcurrent.png"
+            },
+            {
+              "key": "wffuture",
+              "value": "contents/assets/wffuture.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "2.4",
+          "name": "Key Components of EMI",
+          "duration": 60,
+          "url": "contents/9-key-components.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "keycomp",
+              "value": "contents/assets/key_components.PNG"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "2.5",
+          "name": "Key Components (Cont'd)",
+          "duration": 60,
+          "url": "contents/key_workflow.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "2.6",
+          "name": "Key Components (Cont'd)",
+          "duration": 60,
+          "url": "contents/key_preitem.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "2.7",
+          "name": "Concepts Framework",
+          "duration": 60,
+          "url": "contents/10-concepts-framework.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "EMI Concepts",
+      "duration": 60,
+      "url": "contents/11-emi-concepts.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "iphone2",
+          "value": "contents/assets/iphone2.png"
+        },
+        {
+          "key": "iphone1",
+          "value": "contents/assets/iphone1.png"
+        },
+        {
+          "key": "EmiConcepts",
+          "value": "contents/assets/EmiConcepts.png"
+        }
+      ],
+      "chapters": [
+        {
+          "id": "3.1",
+          "name": "EMI Concepts-Core Product",
+          "duration": 60,
+          "url": "contents/emi_concepts_coreproduct.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "3.2",
+          "name": "Benefits",
+          "duration": 60,
+          "url": "contents/12-benefits-product.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "3.3",
+          "name": "Offer",
+          "duration": 60,
+          "url": "contents/13-offer.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "offer",
+              "value": "contents/assets/offer.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "3.4",
+          "name": "Trade Item",
+          "duration": 60,
+          "url": "contents/14-trade-item.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "TradeItem",
+              "value": "contents/assets/TradeItem.png"
+            }
+          ],
+          "chapters": null
+        },
+        {
+          "id": "3.5",
+          "name": "Supply Item",
+          "duration": 60,
+          "url": "contents/15-supply-item.html",
+          "type": "page",
+          "assets": [
+            {
+              "key": "SupplyItem",
+              "value": "contents/assets/SupplyItem.png"
+            }
+          ],
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Glossary",
+      "duration": 60,
+      "url": "contents/glossary.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    }
+  ]
+}

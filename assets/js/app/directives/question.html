@@ -1,0 +1,12 @@
+<div class="quiz_item_wrap">
+  <h3 class="quiz_qus">{{qvm.instance.number}}. {{qvm.instance.question}}</h3>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="option in qvm.instance.options">
+      <div class="radio">
+        <label>
+          <input type="radio" name="optradio" ng-model="qvm.instance.selectedAnswer" ng-value="option.id">{{option.text}}
+        </label>
+      </div>
+    </li>
+  </ul>
+</div>

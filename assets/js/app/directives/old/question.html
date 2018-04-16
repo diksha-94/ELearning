@@ -1,0 +1,26 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 id="question"><b ng-bind="qvm.instance.question"></b></h4>
+        </div>
+        <div class="modal-body">
+            <div class="col-xs-3 col-xs-offset-5">
+            </div>
+
+            <div class="quiz" id="quiz" data-toggle="buttons">
+
+                <ul id="options" style="list-style: none;">
+                    <li ng-repeat="option in qvm.instance.options">
+                        <label class="element-animation1 btn btn-lg btn-primary btn-block" ng-click="qvm.instance.selectedAnswer = option.id">
+                            <span class="btn-label">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </span>
+                            <input type="radio" name="answer" ng-model="qvm.instance.selectedAnswer" ng-value="option.id">
+                            <span ng-bind="option.text"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

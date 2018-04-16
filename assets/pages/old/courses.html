@@ -1,0 +1,104 @@
+<header role="banner" id="fh5co-header" class="navbar-fixed-top">
+  <div class="container">
+    <!-- <div class="row"> -->
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <!-- Mobile Toggle Menu Button -->
+        <div id="ustlogo">
+          <img src="images/ust_logo.png" height="55px" width="180px"
+               align="left">
+        </div>
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"
+           data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+           aria-controls="navbar"><i></i></a>
+        <a class="navbar-brand">Walmart e-Learner</a>
+        <span class="welcome_user">Hi {{user.name}} </span>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="" ng-click="navigateToHome()" data-nav-section="home">
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="" data-nav-section="courses" ng-click="naviageteToCourses()"><span>Courses</span></a>
+          </li>
+          <li>
+            <md-button ng-click="logOut()"
+                       class="md-fab md-mini headerButton" aria-label="Logout">
+              <md-icon md-svg-src="images/icons/logout.svg"></md-icon>
+            </md-button>
+          </li>
+        </ul>
+      </div>
+				<span id="logo"> <img
+          src="images/axis-2-walmart-logo-white-2.png" height="80px"
+          width="170px" align="right">
+				</span>
+    </nav>
+  </div>
+</header>
+<div id="fh5co-courses" data-section="courses">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-heading text-center">
+        <h2 class="single-animate animate-courses-1">Courses</h2>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 subtext single-animate animate-courses-2">
+            <h3>Please attend the courses which are assigned to you. Each course will contain a Q&A session which will
+              evaluate your knowledge after taking that specific course.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!--<div class="col-md-6" ng-repeat="course in courses">
+        <div class="fh5co-courses-item to-animate">
+          <div class="fh5co-courses-img" style="background-image: url(images/img1.png)">
+          </div>
+          <div class="fh5co-courses-text">
+            <h3 class="h2 fh5co-courses-title"><span ng-bind="course.name"></span><span class="fh5co-border"></span>
+            </h3>
+            <p ng-bind="course.description"></p>
+            <p><a ng-click="launchCourse(course)" class="btn btn-primary btn-sm">Launch</a></p>
+          </div>
+        </div>
+      </div>-->
+      <div class="col-lg-9">
+        <table class="table table-bordered course_details_table">
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Course Title</th>
+              <th>Launch Course</th>
+              <th>Course Status</th>
+              <th>Quiz Attempts(Counts)</th>
+              <th>Quiz Status</th>
+              <th>Awards</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="course in courses">
+              <td><span ng-bind="$index"></span>.</td>
+              <td class="name"><span ng-bind="course.name"></span></td>
+              <td><button class="btn btn-default btn-launch" ng-click="launchCourse(course)">Launch</button></td>
+              <td>
+                <span class="chart1" data-percent="50">
+                  <span class="percent"></span>
+                </span>
+              </td>
+              <td>10</td>
+              <td>
+                <span class="chart" data-percent="86">
+                  <span class="percent"></span>
+                </span>
+              </td>
+              <td><span><i class="fa fa-trophy bronze_badge" aria-hidden="true"></i></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

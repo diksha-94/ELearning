@@ -1,0 +1,141 @@
+{
+    "id": "emi",
+    "name": "Coding Standards ",
+    "description": "So, please check your level of learning in Coding Standards section !!",
+    "passPercentage": "90",
+    "mode": "wizard",
+    "questions":[
+        {
+            "id": 1,
+            "type": "multipleChoice",
+            "question": "1. All reusable code should be move to Tools/Utility class.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 2,
+            "type": "multipleChoice",
+            "question": "2. Do not eliminate unnecessary repeated method calls from loops.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 2,
+            "score": 1
+        },        
+        {
+            "id": 3,
+            "type": "multipleChoice",
+            "question": "3. Avoid unnecessary casts.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },        
+        {
+            "id": 4,
+            "type": "multipleChoice",
+            "question": "4. Eliminate repeated casts by casting once and holding the cast item in a correctly typed variable.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },        
+        {
+            "id": 5,
+            "type": "multipleChoice",
+            "question": "5. Have null checks to avoid the possibility of _______.",
+            "options": [
+                {"id": 1, "text": "Null Pointer Exception"},
+                {"id": 2, "text": "IO Exception"},
+                {"id": 3, "text": "Arithmetic Exception"},
+                {"id": 4, "text": "Runtime Exception"}
+            ],
+            "answer": 1,
+            "score": 1
+        },  	
+        {
+            "id": 6,
+            "type": "multipleChoice",
+            "question": "2. Which of the following is a proper constant name ?",
+            "options": [
+                {"id": 1, "text": "NUMBER_TWO"},
+                {"id": 2, "text": "TWENTY_TWO"},
+                {"id": 3, "text": "MAX_COUNT"},
+                {"id": 4, "text": "All the above"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 7,
+            "type": "multipleChoice",
+            "question": "7. Which is the best way to propagate error details from a function to caller ?",
+            "options": [
+                {"id": 1, "text": "Use Error codes as integers"},
+                {"id": 2, "text": "Return boolen return value & pass  error details as parameter"},
+                {"id": 3, "text": "Use exceptions"},
+                {"id": 4, "text": "Combination of 1 & 2"}
+            ],
+            "answer": 4,
+            "score": 1
+        },      
+        {
+            "id": 8,
+            "type": "multipleChoice",
+            "question": "8. NCSS Method Count - Searches for methods with more than ___ lines of code.",
+            "options": [
+                {"id": 1, "text": "25"},
+                {"id": 2, "text": "35"},
+                {"id": 3, "text": "50"},
+                {"id": 4, "text": "80"}
+            ],
+            "answer": 3,
+            "score": 1
+        },        
+        {
+            "id": 9,
+            "type": "multipleChoice",
+            "question": "9. Along with exceptions what all details need to passed ?",
+            "options": [
+                {"id": 1, "text": "Create informative error messages and pass them along with your exceptions"},
+                {"id": 2, "text": "Pass the entire stack trace"},
+                {"id": 3, "text": "No need to pass any details"},
+                {"id": 4, "text": "Only logging is required during exceptions"}
+            ],
+            "answer": 1,
+            "score": 1
+        },   
+        {
+            "id": 10,
+            "type": "multipleChoice",
+            "question": "10. Functions or methods should do only one thing.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 11,
+            "type": "multipleChoice",
+            "question": "11. Are custom logic written instead of using available API methods ?",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        }       
+    ]
+}
+    

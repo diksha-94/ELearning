@@ -1,0 +1,81 @@
+<div class="container-fluid">
+  <h2>QUIZ : <span ng-bind="qzvm.quiz.name"></span></h2>
+  <div class="intro" ng-if="!qzvm.quizStarted"><br>
+    <h3>
+      Congratulations <b>{{qzvm.activeUser}}</b> upon completing "
+      <span ng-bind="qzvm.quiz.name"></span>."
+      <br>
+      Are you ready to take up the test? If Yes, click Test button. If you want to review the course, click Review
+      Course button.
+    </h3>
+    <br/>
+    <button class="btn btn-qa-start" id="startQuiz" ng-click="qzvm.startQuiz()">Take Quiz</button>
+    <button class="btn btn-qa-start" id="reviewQuiz" ng-click="qzvm.reviewCourse()">Review Course</button>
+  </div>
+  <div class="quiz-area" ng-if="qzvm.quizStarted">
+    <div ng-if="!qzvm.quizFinished">
+      <div ng-if="qzvm.isWizardMode()">
+        <question-instance instance="qzvm.activeQuestion"></question-instance>
+        <center>
+          <button class="btn btn-qa-submit" ng-click="qzvm.validateActiveQuestion()"
+                  ng-disabled="!qzvm.activeQuestion.selectedAnswer" ng-show="!qzvm.activeQuestion.answered">
+            Submit
+          </button>
+          <div ng-if="qzvm.activeQuestion.answered">
+            <button class="btn btn-qa-next" ng-click="qzvm.nextQuestion()" class="next-question">Next</button>
+            <br>
+              <span ng-show="qzvm.activeQuestion.answeredCorrectly">
+                <h4><font color="green">That is correct!</font></h4>
+              </span>
+              <span ng-show="!qzvm.activeQuestion.answeredCorrectly">
+                <h4><font color="red">Sorry, that is an incorrect answer.</font></h4>
+                <button class="CorrectAnswer">
+                    Correct Answer = <b>{{qzvm.getCorrectAnswer()}}</b>
+                </button>
+              </span>
+          </div>
+        </center>
+      </div>
+      <div ng-if="!qzvm.isWizardMode()">
+        <div ng-repeat="question in qzvm.quiz.questions">
+          <question-instance instance="question"></question-instance>
+          <center>
+            <div ng-if="question.answered">
+              <br>
+                <span ng-show="question.answeredCorrectly">
+                    <h4><font color="green">That is correct!</font></h4>
+                </span>
+                <span ng-show="!question.answeredCorrectly">
+                  <h4><font color="red">Sorry, that is an incorrect answer.</font></h4>
+                  <button class="CorrectAnswer">
+                    Correct Answer = <b>{{qzvm.getCorrectAnswer()}}</b>
+                  </button>
+                </span>
+            </div>
+          </center>
+        </div>
+        <center>
+          <button class="btn btn-qa-submit" ng-click="qzvm.validateQuestions()" ng-show="!qzvm.submitted">
+            Submit
+          </button>
+          <button class="btn btn-qa-next" ng-click="qzvm.finishQuiz()" class="next-question" ng-show="qzvm.submitted">
+            Next
+          </button>
+        </center>
+      </div>
+    </div>
+    <div ng-if="qzvm.quizFinished">
+      <br><br>
+      <h3>Congratulations <b>{{qzvm.activeUser}}</b> upon completing "<span ng-bind="qzvm.quiz.name"></span>."<br>Criteria for
+        successful completion of course is 90%.<br>Marks you scored in <span ng-bind="qzvm.quiz.name"></span> is
+        <b><span ng-bind="qzvm.quiz.score"></span><span>%</span></b>.<br><br>If you prefer to retake the course, click
+        Review Course button. If you prefer to retake the quiz, click Quiz Retake button.</h3>
+      <br>
+      <p>
+        <button class="btn btn-qa-submit" ng-click="qzvm.resetQuiz()">Quiz Retake</button>
+        <button class="btn btn-qa-submit" ng-click="qzvm.reviewCourse()">Review Course</button>
+        <button class="btn btn-qa-submit" ng-click="qzvm.exitCourse()">Exit Course</button>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+<div class="col-lg-12 content_wrapper">
+  <div class="course_container">
+    <div class="top_heading">
+      <h3>Recently Viewed</h3>
+    </div>
+    <div class="panel_top_wrap clearfix" ng-hide="csvm.dashboard.recent.length === 0">
+      <div class="col-md-3 corse_item" ng-repeat="course in csvm.dashboard.recent | orderBy: '-recent'">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-file"></span></div>
+          <div class="panel-body">
+            <p ng-bind="course.name"></p>
+            <span>Viewed: {{course.recent | date : 'medium'}}</span>
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-default btn_launch" ng-click="csvm.launchCourse(course)">Launch</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel_top_wrap clearfix" ng-show="csvm.dashboard.recent.length === 0">
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-file"></span></div>
+          <div class="panel-body">
+            <p>No recently accessed courses</p>
+          </div>
+          <div class="panel-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="section-divider">
+  <div class="course_dashboard_container clearfix">
+    <div class="top_heading">
+      <h3>Course Dashboard</h3>
+    </div>
+    <div class="col-md-12">
+      <table class="table table-bordered course_details_table">
+        <thead>
+        <tr>
+          <th>SL No</th>
+          <th>Course Title</th>
+          <th>Launch Course</th>
+          <th>Course Status</th>
+          <th>Test Attempts</th>
+          <th>Test Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="course in csvm.dashboard.courses">
+          <td>{{$index + 1}}</td>
+          <td ng-bind="course.name"></td>
+          <td>
+            <button class="btn btn-default btn-launch" ng-click="csvm.launchCourse(course)">Launch</button>
+          </td>
+          <td><img ng-src="{{csvm.getCourseStatusIcon(course.metadata.status)}}" class="img-responsive" alt=""></td>
+          <td ng-bind="course.metadata.testAttempts"></td>
+          <td><img ng-src="{{csvm.getTestStatusIcon(course.metadata.testStatus)}}" class="img-responsive" alt=""></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr class="section-divider">
+  <div class="clearfix futher_read_container">
+    <div class="top_heading">
+      <h3>Further Reading</h3>
+    </div>
+    <div class="further_read_list">
+      <div class="col-md-4" ng-repeat="group in csvm.dashboard.reading">
+        <ul class="list-unstyled">
+          <li ng-repeat="item in group">
+            <img src="images/user-book-icon.png" class="user_book_icon">
+            <a href="{{item.url}}" target="_blank" ng-bind="item.title"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

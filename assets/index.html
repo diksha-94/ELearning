@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="elearnerApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="">
+  <title>eLearner</title>
+  <link rel="stylesheet" href="js/dependencies/angular-material/angular-material.css">
+  <link rel="stylesheet" href="js/dependencies/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/simple-sidebar.css">
+  <link rel="stylesheet" href="styles/bootstrap-switch.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/angular.treeview.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body ng-controller="baseController as basevm">
+  <div class="container-fluid" ng-class="{'cbt_login_wrapper': basevm.isLoginPage()}">
+    <div class="row">
+      <!--navbar starts-->
+      <nav class="navbar navbar-default cbt_home_top_navbar">
+        <div class="container-fluid">
+          <div class="navbar-header top_home_navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="" ng-click="basevm.navigateToHome()"><img src="images/walmart_logo.jpg" class="img-responsive logo_img" alt=""></a>
+            <a class="navbar-brand cbt_heading_logo">Walmart e-Learner</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse" ng-if="basevm.showHeaderNavigation()">
+            <div ng-hide="basevm.app.activeCourse || basevm.isCertificatePage()">
+              <ul class="nav navbar-nav navbar-right nav_menu_item">
+                <!--<li ng-class="{'active': basevm.isHomePage()}"><a ng-click="basevm.goToHome()"><span>Home</span></a></li>
+                <li ng-class="{'active': basevm.isCoursesPage()}"><a ng-click="basevm.goToCourses()"><span>Courses</span></a></li>-->
+                <li>
+                  <a href="" ng-click="basevm.navigateToResults()" ng-show="basevm.app.user.isAdmin">Results</a>
+                </li>
+                <li class="dropdown user_login_dtl">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href=""><span class="login_txt">Hi {{basevm.app.user.name}}</span>
+                    <span class="user_profile_pic glyphicon glyphicon-user img-circle" aria-hidden="true"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a ng-click="basevm.logOut()"><span class="glyphicon glyphicon-log-out logout_icon"></span>Logout</a></li>
+                  </ul>
+                </li>
+                <li class="badge_icon cursor_class">
+                  <a ng-click="basevm.navigateToCertificatePage()">
+                    <span ng-show="badge.status==='default'">
+                      <img src="images/default_prize.png"/>
+                    </span>
+                    <span ng-show="badge.status==='bronze'">
+                      <img src="images/bronse_prize.png"/>
+                    </span>
+                    <span ng-show="badge.status==='silver'">
+                      <img src="images/diamound_prize.png"/>
+                    </span>
+                    <span ng-show="badge.status==='gold'">
+                      <img src="images/gold_prize.png"/>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div ng-show="basevm.app.activeCourse">
+              <ul class="nav navbar-nav navbar-right nav_menu_item">
+                <li class="exit_btn">
+                   <a ng-click="basevm.closeCourse()"><span>Exit</span><span class="exit_icon"><i class="fa fa-times" aria-hidden="true"></i></span></a>
+                </li>
+              </ul>
+            </div>
+            <div ng-show="basevm.isCertificatePage()">
+              <ul class="nav navbar-nav navbar-right nav_menu_item">
+                <li class="exit_btn">
+                  <a ng-click="basevm.closeCertificate()"><span>Exit</span><span class="exit_icon"><i class="fa fa-times" aria-hidden="true"></i></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!--/.container-fluid -->
+      </nav>
+      <!--navbar ends-->
+
+      <ng-view></ng-view>
+    </div>
+  </div>
+  <footer class="cbt_footer" ng-hide="basevm.isLoginPage()">
+    <div class="container-fluid">
+      <div class="col-md-3 pull-left">
+        <img src="images/ust_logo.png" class="img-responsive footer_logo_img" alt="">
+      </div>
+      <div class="col-md-3 pull-right">
+        <p class="copyright_txt">Copyright &#169 Your Website 2016</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/dependencies/sails.io.js"></script>
+  <script src="js/dependencies/jQuery/jquery.min.js"></script>
+  <script src="js/dependencies/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/dependencies/angular/angular.js"></script>
+  <script src="js/dependencies/angular-route/angular-route.js"></script>
+  <script src="js/dependencies/angular-animate/angular-animate.js"></script>
+  <script src="js/dependencies/angular-aria/angular-aria.js"></script>
+  <script src="js/dependencies/angular-material/angular-material.js"></script>
+  <script src="js/app/app.js"></script>
+  <script src="js/app/controllers/adminController.js"></script>
+  <script src="js/app/controllers/loginController.js"></script>
+  <script src="js/app/controllers/baseController.js"></script>
+  <script src="js/app/controllers/coursesController.js"></script>
+  <script src="js/app/controllers/courseController.js"></script>
+  <script src="js/app/controllers/certificateController.js"></script>
+  <script src="js/app/services/propertyFilter.js"></script>
+  <script src="js/app/services/arrayDividerFilter.js"></script>
+  <script src="js/app/services/eLearnerAppConfig.js"></script>
+  <script src="js/app/services/eLearnerLocalRepository.js"></script>
+  <script src="js/app/services/eLearnerService.js"></script>
+  <script src="js/app/services/adminService.js"></script>
+  <script src="js/app/services/eLearnerRuntimeService.js"></script>
+  <script src="js/app/directives/angular.treeview.js"></script>
+  <script src="js/app/directives/question.js"></script>
+  <script src="js/app/directives/quizManager.js"></script>
+</body>
+</html>

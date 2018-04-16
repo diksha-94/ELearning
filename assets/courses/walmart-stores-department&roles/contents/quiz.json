@@ -1,0 +1,128 @@
+{
+    "id": "emi",
+    "name": "Walmart Stores - Departments and Roles",
+    "description": "So, please check your level of learning in Walmart Stores : Departments and Roles section !!",
+    "passPercentage": "90",
+    "mode": "wizard",
+    "questions":[
+        {
+            "id": 1,
+            "type": "multipleChoice",
+            "question": "1. Which is the team involved in getting the products to customer in Store?",
+            "options": [
+                {"id": 1, "text": "Merchandising and Operations"},
+                {"id": 2, "text": "Store management team"},
+                {"id": 3, "text": "DC management team"},
+                {"id": 4, "text": "Suppliers"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 2,
+            "type": "multipleChoice",
+            "question": "2. Every department has a corresponding department no: in walmart system",
+            "options": [
+                {"id": 1, "text": "True"},
+                {"id": 2, "text": "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 3,
+            "type": "multipleChoice",
+            "question": "3. Which among the below is not part of the Walmart merchandising team?",
+            "options": [
+                {"id": 1, "text": "Buyer"},
+                {"id": 2, "text": "Business Analytics (Planner)"},
+                {"id": 3, "text": "Supplier"},
+                {"id": 4, "text": "Product Development"},
+				{"id": 5, "text": "Replenishment"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 4,
+            "type": "multipleChoice",
+            "question": "4. There are 12 child items retailing at $2 each in an assortment. What will be the unit retail of the assortment ?",
+            "options": [
+                {"id": 1, "text":  "$24"},
+                {"id": 2, "text":  "$12"},
+                {"id": 3, "text":  "$2"},
+                {"id": 4, "text":  "$10"}
+            ],
+            "answer": 3,
+            "score": 1
+        },
+        {
+            "id": 5,
+            "type": "multipleChoice",
+            "question": "5. The main responsibility of the buyer is Modular drawings?",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+        {
+            "id": 6,
+            "type": "multipleChoice",
+            "question": "6. Business Analytics (Planner) creates all pre-season budgets by category and fineline.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 7,
+            "type": "multipleChoice",
+            "question": "7. Sourcing has an important role to play with Direct Imports. They are specifically responsible for costing and delivery of Direct Imports",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+        {
+            "id": 8,
+            "type": "multipleChoice",
+            "question": "8. Product development team provides GDP (Global Design Pack) to suppliers",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        },
+		{
+            "id":9,
+            "type": "multipleChoice",
+            "question": "9. Order Specialist executes merchandising strategies, ensures the right product gets into the right store at the right time. They analyze day to day business and provide suggestions for improvements.",
+            "options": [
+                {"id": 1, "text":  "True"},
+                {"id": 2, "text":  "False"}
+            ],
+            "answer": 2,
+            "score": 1
+        },
+		{
+            "id": 10,
+            "type": "multipleChoice",
+            "question": "10. Order Specialist is part of the replenishment group. ",
+            "options": [
+                {"id": 1, "text": "True"},
+                {"id": 2, "text": "False"}
+            ],
+            "answer": 1,
+            "score": 1
+        }		
+
+    ]
+}
+    

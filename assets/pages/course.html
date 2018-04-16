@@ -1,0 +1,67 @@
+<div id="inner_course_wrapper" ng-class="{'toggled': !cvm.application.showSideBar}">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <div class="">
+      <div class="menu-list">
+        <div class="menu-list"
+             data-angular-treeview="true"
+             data-tree-id="cTree"
+             data-tree-model="[course.manifest]"
+             data-tree-padding="0"
+             data-node-label="name"
+             data-node-children="chapters">
+        </div>
+      </div>
+     <div class="start_quiz_btn"> <button class="btn btn_default start_crse_btn" ng-click="cvm.loadQuiz()">Course Test</button></div>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="toggle_left_btn">
+      <button class="sidebar_icon sidebar_icon--active img-right-circle" ng-class="{'is-active': cvm.application.showSideBar}"
+              data-target="#menu-toggle" id="menu-toggle" ng-click="cvm.toggleSideBar()" ng-show="cvm.application.showSideBarToggle">
+        <span></span>
+      </button>
+    </div>
+    <div class="container-fluid padding-left-space">
+      <div ng-if="cvm.showCourseChapters()" ng-include="course.activePage.absUrl"></div>
+      <div ng-if="cvm.showCourseQuiz()">
+        <quiz-manager quiz="course.activeQuiz" active-user="{{cvm.application.user.name}}"
+                      course-name="{{course.manifest.name}}"
+                      on-review-course="cvm.reviewCourse()"
+                      on-quiz-completed="quizCompleted()">
+        </quiz-manager>
+      </div>
+      <div ng-if="cvm.showCourseQuizResult()" ng-include="'pages/quizResults.html'"></div>
+      <div class="panel-footer clearfix course_btn_area">
+        <div class="crse_btn_wrap" ng-show="cvm.application.showNavBar">
+          <ul class="pager">
+            <li class="cursor_class">
+              <a ng-click="cvm.onPreviousClick()" ng-disabled="cvm.isFirstPage()" ng-class="{'btn_disabled': cvm.isFirstPage()}">Previous</a>
+            </li>
+            <li><span class="label_pager">{{course.activePage.pageNo}}/{{course.metadata.totalChapters}}</span></li>
+            <li class="cursor_class">
+              <a ng-click="cvm.onNextClick()" ng-hide="cvm.isLastPage()">Next</a>
+              <a ng-click="cvm.loadQuiz()" ng-show="cvm.isLastPage()">Course Test</a>
+            </li>
+            <li class="autoplay_btn">
+              <md-switch ng-model="course.autoPlay" aria-label="Auto-play" class="btn">
+                <span ng-class="{'auto-play-active': course.autoPlay === true}">Auto-Play</span>
+              </md-switch>
+            </li>
+          </ul>
+          <span class="crse_btn_audio" ng-if="course.activePage.audio">
+            <span class="crse_audio_cntrl">
+              <audio controls autoplay>
+                <source ng-src="{{cvm.getCourseAudio()}}" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

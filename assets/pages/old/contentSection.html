@@ -1,0 +1,19 @@
+<div ng-if="application.launchMode.isEnabled">
+    <div class="col-md-12">
+        <div ng-include="'pages/landingPage.html'"></div>
+    </div>
+</div>
+<div class="row" ng-if="application.courseMode.isEnabled">
+    <div class="col-md-12">
+        <div class="btn-group pull-right">
+            <button type="button" ng-disabled="isFirstPage()" class="btn btn-primary" ng-class="{'disabled':isFirstPage()}" ng-click="onPreviousClick()">Previous</button>
+            <button type="button" ng-disabled="isLastPage()" class="btn btn-primary" ng-class="{'disabled':isLastPage()}" ng-click="onNextClick()">Next</button>
+        </div>
+        <md-switch class="md-primary" md-no-ink="" aria-label="Switch No Ink" ng-model="course.autoPlay">
+        </md-switch>
+        <div ng-if="course.activePage.type === 'page'" ng-include="course.activePage.absUrl"></div>
+        <div ng-if="course.activePage.type === 'quiz' && course.activeQuiz">
+            <quiz-manager quiz="course.activeQuiz"></quiz-manager>
+        </div>
+    </div>
+</div>

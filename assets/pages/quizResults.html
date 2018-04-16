@@ -1,0 +1,66 @@
+<div class="course_test_container">
+  <div class="crse_test_wrap">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 ng-bind="course.manifest.name"></h4>
+      </div>
+      <div class="panel-body">
+        <div ng-show="course.activeQuiz.passed">
+          <h2>CONGRATULATIONS!!!<span>☺</span></h2>
+          <p>You HAVE SUCCESSFULLY COMPLETED THE COURSE</p>
+          <span class="tst_btn_area">
+            <button class="btn btn-default test_btn" ng-click="cvm.unloadCourse()">Back to Course List</button>
+          </span>
+        </div>
+        <div ng-show="!course.activeQuiz.passed">
+          <h2>NICE TRY!!!</h2>
+          <p>Your score is {{course.activeQuiz.score}}%. You need {{course.activeQuiz.passPercentage}}% to complete the course</p>
+          <span class="tst_btn_area">
+            <button class="btn btn-default test_btn" ng-click="cvm.reviewCourse()">Retake Course</button>
+            <button class="btn btn-default test_btn" ng-click="cvm.reviewTest()">Retake Test</button>
+            <button class="btn btn-default test_btn" ng-click="cvm.showDetailedTestResults()">Review Test</button>
+          </span>
+        </div>
+        <br/>
+        <div class="progress_bar_area">
+          <p>Course test result</p>
+          <div class="col-md-6">
+            <div class="progress">
+              <div class="progress-bar" role="progressbar"
+                   aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:{{course.activeQuiz.passPercentage}}%">
+                {{course.activeQuiz.passPercentage}}%
+                <div class="tooltip_indicator">
+                  {{course.activeQuiz.passPercentage}}% Required for Course Test
+                </div>
+              </div>
+              <div class="progress-bar progress-bar-striped active completed_progress" role="progressbar"
+                   aria-valuenow="{{course.activeQuiz.score}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.activeQuiz.score}}%">
+                {{course.activeQuiz.score}}%
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ng-show="cvm.showTestDetails">
+          <table class="table table-bordered course_details_table">
+            <thead>
+            <tr>
+              <th>SL No</th>
+              <th>Question</th>
+              <th>Your Answer</th>
+              <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="question in course.activeQuiz.questions">
+              <td>{{$index + 1}}</td>
+              <td ng-bind="question.question"></td>
+              <td ng-bind="question.getQuestionsAnswer(question)"></td>
+              <td ng-class="{'bg-primary': question.answeredCorrectly, 'bg-danger': !question.answeredCorrectly}">{{question.answeredCorrectly ? "Correct" : "In-Correct"}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

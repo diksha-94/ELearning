@@ -1,0 +1,153 @@
+{
+  "id": "coding-standard",
+  "name": "Coding Standards",
+  "duration": 3,
+  "url": "contents/codingstandard_intro.html",
+  "type": "page",
+  "assets": null,
+  "quiz": {
+    "id": "10",
+    "name": "Q&A",
+    "duration": 300,
+    "url": "contents/quiz.json"
+  },
+  "chapters": [
+    {
+      "id": "1",
+      "name": "Javadoc",
+      "duration": 3,
+      "url": "contents/javadoc.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "2",
+      "name": "Reusability",
+      "duration": 3,
+      "url": "contents/reusability.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "3",
+      "name": "Performance",
+      "duration": 3,
+      "url": "contents/performance.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "4",
+      "name": "Basic",
+      "duration": 3,
+      "url": "contents/basic.html",
+      "type": "page",
+      "assets": null,
+      "chapters": [
+        {
+          "id": "4.1",
+          "name": "Basic-1",
+          "duration": 3,
+          "url": "contents/basic-1.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "4.2",
+          "name": "Basic-2",
+          "duration": 3,
+          "url": "contents/basic-2.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Logging",
+      "duration": 3,
+      "url": "contents/Logging.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "6",
+      "name": "Null Checks",
+      "duration": 3,
+      "url": "contents/nullChecks.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "7",
+      "name": "Exception Handling",
+      "duration": 3,
+      "url": "contents/exceptionHandling.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "8",
+      "name": "Camel Routes",
+      "duration": 3,
+      "url": "contents/camelRoutes.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "9",
+      "name": "Checklist",
+      "duration": 3,
+      "url": "contents/checklist_intro.html",
+      "type": "page",
+      "assets": null,
+      "chapters": [
+        {
+          "id": "9.1",
+          "name": "Checklist-1",
+          "duration": 3,
+          "url": "contents/checklist.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "9.2",
+          "name": "Checklist-2",
+          "duration": 3,
+          "url": "contents/checklist2.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "9.3",
+          "name": "Checklist-3",
+          "duration": 3,
+          "url": "contents/checklist3.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        },
+        {
+          "id": "9.4",
+          "name": "Checklist-4",
+          "duration": 3,
+          "url": "contents/checklist4.html",
+          "type": "page",
+          "assets": null,
+          "chapters": null
+        }
+      ]
+    }
+  ]
+}

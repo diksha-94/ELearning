@@ -1,0 +1,57 @@
+<header role="banner" id="fh5co-header" class="homeHeader">
+  <div class="container">
+    <!-- <div class="row"> -->
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <!-- Mobile Toggle Menu Button -->
+        <div id="ustlogo">
+          <img src="images/ust_logo.png" height="55px" width="180px" align="left">
+        </div>
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar"
+           aria-expanded="false" aria-controls="navbar"><i></i></a>
+        <a class="navbar-brand">Walmart e-Learner</a>
+        <span class="welcome_user">Hi {{user.name}} </span>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="" data-nav-section="home"><span>Home</span></a>
+          </li>
+          <li>
+            <a href="" data-nav-section="courses" ng-click="naviageteToCourses()"><span>Courses</span></a>
+          </li>
+          <li>
+            <md-button ng-click="logOut()" class="md-fab md-mini headerButton" aria-label="Logout">
+              <md-icon md-svg-src="images/icons/logout.svg"></md-icon>
+            </md-button>
+          </li>
+        </ul>
+      </div>
+      <span id="logo">
+        <img src="images/axis-2-walmart-logo-white-2.png" height="80px" width="170px" align="right">
+      </span>
+    </nav>
+    <!-- </div> -->
+  </div>
+</header>
+<div data-section="home">
+  <div class="owl-carousel owl-carousel-fullwidth">
+    <div class="item" style="background-image:url(images/walmart.jpg)">
+      <div class="overlay"></div>
+      <div class="container" style="position: absolute;">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <div class="fh5co-owl-text-wrap">
+              <div class="fh5co-owl-text">
+                <h2 class="fh5co-sub-lead to-animate" style="font-style: italic;">"The expert at anything was once a beginner."</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="SamWaltonImg">
+          <img src="images/sam1.jpg" width="400" height="200">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

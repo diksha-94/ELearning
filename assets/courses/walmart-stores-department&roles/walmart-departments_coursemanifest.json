@@ -1,0 +1,169 @@
+{
+  "id": "walmart-stores-department&roles",
+  "name": "Walmart Stores - Departments and Roles",
+  "duration": 30,
+  "url": "contents/intro.html",
+  "type": "page",
+  "assets": null,
+  "quiz": {
+    "id": "12",
+    "name": "Q&A",
+    "duration": 300,
+    "url": "contents/quiz.json"
+  },
+  "chapters": [
+    {
+      "id": "1",
+      "name": "Store Merchandising",
+      "duration": 60,
+      "url": "contents/1-store_merchandising.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "page1",
+          "value": "contents/assets/page1.png"
+        }
+      ],
+      "chapters": null
+    },
+    {
+      "id": "2",
+      "name": "Store Hierarchy",
+      "duration": 60,
+      "url": "contents/2-store_hierarchy.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "page2",
+          "value": "contents/assets/page2_1.png"
+        },
+        {
+          "key": "examples",
+          "value": "contents/assets/examples.png"
+        }
+      ],
+      "chapters": null
+    },
+    {
+      "id": "3",
+      "name": "Department Numbers & Names",
+      "duration": 60,
+      "url": "contents/3-department_numbers.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "department_number",
+          "value": "contents/assets/dept_no.png"
+        }
+      ],
+      "chapters": null
+    },
+    {
+      "id": "4",
+      "name": "Roles",
+      "duration": 60,
+      "url": "contents/4-roles.html",
+      "type": "page",
+      "assets": null,
+      "chapters": null
+    },
+    {
+      "id": "5",
+      "name": "Buyer",
+      "duration": 60,
+      "url": "contents/5-buyer.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "buyer",
+          "value": "contents/assets/buyer.png"
+        }
+      ],
+      "chapters": null
+    },
+    {
+      "id": "6",
+      "name": "Business Analytics",
+      "duration": 60,
+      "url": "contents/6-BusinessAnalytics.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "BA",
+          "value": "contents/assets/analytics.png"
+        }
+      ],
+      "chapters": null
+    },
+    {
+      "id": "7",
+      "name": "Sourcing",
+      "duration": 60,
+      "url": "contents/7-sourcing.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "sourcing",
+          "value": "contents/assets/sourcing.png"
+        }
+      ],
+      "chapters": null
+    },
+    {
+      "id": "8",
+      "name": "Product Development",
+      "duration": 60,
+      "url": "contents/8-product_development.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "product_development",
+          "value": "contents/assets/prod_developmnt.png"
+        }
+      ],
+      "chapters": null
+    },
+    {
+      "id": "9",
+      "name": "Replenishment",
+      "duration": 60,
+      "url": "contents/9-replenishment.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "replenishment",
+          "value": "contents/assets/replenishment.png"
+        }
+      ],
+      "chapters": null
+    },
+    {
+      "id": "10",
+      "name": "Modular",
+      "duration": 60,
+      "url": "contents/10-modular.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "modular",
+          "value": "contents/assets/modular.png"
+        }
+      ],
+      "chapters": null
+    },
+    {
+      "id": "11",
+      "name": "Order Specialist",
+      "duration": 60,
+      "url": "contents/11-order_specialist.html",
+      "type": "page",
+      "assets": [
+        {
+          "key": "order",
+          "value": "contents/assets/order.png"
+        }
+      ],
+      "chapters": null
+    }
+  ]
+}

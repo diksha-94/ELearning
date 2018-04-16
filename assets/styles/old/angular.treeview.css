@@ -1,0 +1,59 @@
+div[data-angular-treeview] {/* prevent user selection */
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;/* default */
+  color: black;
+  text-decoration: none;
+}
+
+div[data-tree-model] ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  overflow: hidden;
+  color: #fff;
+}
+
+div[data-tree-model] li {
+  position: relative;
+  padding: 0 0 0 10px;
+  line-height: 30px;
+}
+
+div[data-tree-model] li .expanded {
+  padding: 1px 10px;
+  background-image: url("../images/folder.png");
+  background-repeat: no-repeat;
+}
+
+div[data-tree-model] li .collapsed {
+  padding: 1px 10px;
+  background-image: url("../images/folder-closed.png");
+  background-repeat: no-repeat;
+}
+
+div[data-tree-model] li .normal {
+  padding: 1px 10px;
+  background-image: url("../images/file.png");
+  background-repeat: no-repeat;
+}
+
+div[data-tree-model] li md-icon {
+  margin: 0px 0px 3px 0px;
+  height: 20px;
+  width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+div[data-tree-model] li i, div[data-tree-model] li span {
+  padding: 0 10px 0 3px;
+  cursor: pointer;
+}
+
+div[data-tree-model] li .selected {
+  background-color: #0F4F8C;
+}
