@@ -55,5 +55,8 @@ module.exports.routes = {
   "POST /course/status": "CoursesController.setStatus",
   "GET /admin/course/results": "AdminController.getCourseResults",
   "POST /school/register": "SchoolController.registerSchool",
-  "PUT /school/auth": "SchoolController.loginSchool"
+  "PUT /school/auth": "SchoolController.loginSchool",
+  "GET /school/get": "SchoolController.getSchools",
+  "POST /teacher/register": "TeacherController.registerTeacher",
+  "PUT /teacher/auth": "TeacherController.loginTeacher",
 };

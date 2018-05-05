@@ -20,5 +20,9 @@ module.exports = {
 	checkSchoolCodeExistsQuery: function(schoolCode) {
 		var query = "SELECT * from schooldb.schooldetails WHERE schoolcode = '"+schoolCode+"';";
 		return query;
+	},
+	getAllSchoolsQuery: function() {
+		var query = "SELECT * from schooldb.schoolcode;";
+		return query;
 	}
 };

@@ -98,5 +98,29 @@ module.exports = {
 			    res.send(response);
 			});
 		});
+	},
+	getSchools: function (req, res) {
+		var connection;
+		var response = {};
+		DBConnection.connect(function(con){
+			connection = con;
+			var getSchoolsQuery = sqlQueries.getAllSchoolsQuery();
+			console.log("query: "+getSchoolsQuery);
+			connection.query(getSchoolsQuery, function (err, result) {
+			    if (err){
+			    	response = common.generateReponse(statusCode.DB_ERROR, "failure", err);
+			    }
+			    else{
+			    	if(result.length == 0){
+			    		//User doesn't exist
+			    		response = common.generateReponse(statusCode.NO_SCHOOLS, "failure", "No school is registered");
+			    	}
+			    	else{
+			    		response = common.generateReponse(statusCode.SUCCESS, "success", result.message, result);
+			    	}
+			    }
+			    res.send(response);
+			});
+		});
 	}
 };

@@ -5,4 +5,5 @@ module.exports = {
 	INVALID_EMAIL_PASSWORD : "EL_004",
 	SUCCESS : "EL_200",
 	DB_ERROR : "EL_005",
+	NO_SCHOOLS : "EL_006",
 };
