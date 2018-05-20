@@ -52,5 +52,7 @@ module.exports.routes = {
   "POST /teacher/register": "TeacherController.registerTeacher",
   "PUT /teacher/auth": "TeacherController.loginTeacher",
   "POST /subject/add-update": "ContentManagementController.addUpdateSubject",
-  "DELETE /subject/delete": "ContentManagementController.deleteSubject"
+  "DELETE /subject/delete": "ContentManagementController.deleteSubject",
+  "POST /chapter/add-update": "ContentManagementController.addUpdateChapter",
+  "DELETE /chapter/delete": "ContentManagementController.deleteChapter"
 };

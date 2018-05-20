@@ -24,5 +24,23 @@ module.exports = {
 		var query = "INSERT into contentdb.chapters (adminid, subjectid, chaptername, chapterdescription, parent) "+
 	  		"VALUES ('"+adminId+"','"+subjectId+"','"+chapterName+"','"+chapterDescription+"','"+parent+"');";
 		return query;
+	},
+	checkChapterExistsQuery: function(adminId, subjectId, chapterName) {
+		var query = "SELECT * from contentdb.chapters WHERE adminid = '"+adminId+"' AND subjectid = '"+subjectId+
+		 			"' AND chaptername = '"+chapterName+"';";
+		return query;
+	},
+	updateChapterQuery: function(chapterId, chapterName, chapterDesc) {
+		var query = "UPDATE contentdb.chapters SET chaptername = '"+chapterName+"', chapterdescription = '"+
+					chapterDesc+"' WHERE id = '"+chapterId+"';";
+		return query;
+	},
+	checkChapterExistsByIdQuery: function(chapterId) {
+		var query = "SELECT * from contentdb.chapters WHERE id = '"+chapterId+"';";
+		return query;
+	},
+	deleteChapterQuery: function(chapterId) {
+		var query = "UPDATE contentdb.chapters SET deleted = 1 WHERE id = '"+chapterId+"';";
+		return query;
 	}
 };

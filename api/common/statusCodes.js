@@ -8,4 +8,6 @@ module.exports = {
 	NO_SCHOOLS : "EL_006",
 	SUBJECT_EXIST : "EL_007",
 	SUBJECT_NOT_EXIST : "EL_008",
+	CHAPTER_EXIST : "EL_009",
+	CHAPTER_NOT_EXIST : "EL_010",
 };
