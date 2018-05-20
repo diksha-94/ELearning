@@ -59,18 +59,22 @@ module.exports = {
 			connection.query(checkEmailExistsQuery, function (err, result) {
 			    if (err){
 			    	response = common.generateReponse(statusCode.DB_ERROR, "failure", err);
+			    	res.send(response);
 			    }
 			    else if(result.length > 0){
 			    	response = common.generateReponse(statusCode.EMAIL_ALREADY_EXISTS, "failure", "This email id is already registered");
+			    	res.send(response);
 			    }
 			    else{
 			    	var checkSchoolCodeExistsQuery = sqlQueries.checkSchoolCodeExistsQuery(schoolCode);
 			    	connection.query(checkSchoolCodeExistsQuery, function (err, result) {
 					    if (err){
 					    	response = common.generateReponse(statusCode.DB_ERROR, "failure", err);
+					    	res.send(response);
 					    }
 					    else if(result.length > 0){
 					    	response = common.generateReponse(statusCode.SCHOOLCODE_ALREADY_EXISTS, "failure", "This school is already registered");
+					    	res.send(response);
 					    }
 					    else{
 					    	var schoolRegisterQuery = sqlQueries.registerSchoolQuery(schoolName, schoolCode, phoneNumber, emailId, common.passwordEncryption(password));
@@ -78,6 +82,7 @@ module.exports = {
 							connection.query(schoolRegisterQuery, function (err, result) {
 							    if (err){
 							    	response = common.generateReponse(statusCode.DB_ERROR, "failure", err);
+							    	res.send(response);
 							    }
 							    else{
 							    	var schoolCodeInsertQuery = sqlQueries.insertSchoolCodeQuery(schoolName, schoolCode);
@@ -85,17 +90,18 @@ module.exports = {
 									connection.query(schoolCodeInsertQuery, function (err, result) {
 									    if (err){
 									    	response = common.generateReponse(statusCode.DB_ERROR, "failure", err);
+									    	res.send(response);
 									    }
 									    else{
 									    	response = common.generateReponse(statusCode.SUCCESS, "success", result.message);
+									    	res.send(response);
 									    }
 									});
 							    }
 							});
 					    }
 			    	});
-			    }
-			    res.send(response);
+			     }
 			});
 		});
 	},

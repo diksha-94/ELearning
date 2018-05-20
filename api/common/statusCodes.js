@@ -6,4 +6,6 @@ module.exports = {
 	SUCCESS : "EL_200",
 	DB_ERROR : "EL_005",
 	NO_SCHOOLS : "EL_006",
+	SUBJECT_EXIST : "EL_007",
+	SUBJECT_NOT_EXIST : "EL_008",
 };

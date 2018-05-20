@@ -61,9 +61,11 @@ module.exports = {
 			connection.query(checkEmailExistsQuery, function (err, result) {
 			    if (err){
 			    	response = common.generateReponse(statusCode.DB_ERROR, "failure", err);
+			    	res.send(response);
 			    }
 			    else if(result.length > 0){
 			    	response = common.generateReponse(statusCode.EMAIL_ALREADY_EXISTS, "failure", "This email id is already registered");
+			    	res.send(response);
 			    }
 			    else{
 			    	var teacherRegisterQuery = sqlQueries.registerTeacherQuery(schoolId, className, username, emailId, mobileNo, common.passwordEncryption(password), name);
@@ -71,13 +73,14 @@ module.exports = {
 					connection.query(teacherRegisterQuery, function (err, result) {
 						if (err){
 							response = common.generateReponse(statusCode.DB_ERROR, "failure", err);
+							res.send(response);
 						}
 						else{
 							response = common.generateReponse(statusCode.SUCCESS, "success", result.message);
+							res.send(response);
 						}
 					});
 			    }
-				res.send(response);
 			});
 		});
 	}

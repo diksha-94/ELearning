@@ -46,17 +46,11 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  "POST /login": "LoginController.login",
-  "GET /dashboard/courses": "DashboardController.find",
-  "GET /dashboard/reading": "DashboardController.getFurtherReading",
-  "GET /courses/all": "CoursesController.getAll",
-  "GET /courses/find": "CoursesController.find",
-  "GET /course/status": "CoursesController.getStatus",
-  "POST /course/status": "CoursesController.setStatus",
-  "GET /admin/course/results": "AdminController.getCourseResults",
   "POST /school/register": "SchoolController.registerSchool",
   "PUT /school/auth": "SchoolController.loginSchool",
   "GET /school/get": "SchoolController.getSchools",
   "POST /teacher/register": "TeacherController.registerTeacher",
   "PUT /teacher/auth": "TeacherController.loginTeacher",
+  "POST /subject/add-update": "ContentManagementController.addUpdateSubject",
+  "DELETE /subject/delete": "ContentManagementController.deleteSubject"
 };
