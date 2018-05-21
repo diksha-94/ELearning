@@ -29,7 +29,7 @@ module.exports = {
 				    }
 				    else{
 				    	if(result.length > 0){
-				    		//Subject doesn't exist
+				    		//Subject already exist
 				    		response = common.generateReponse(statusCode.SUBJECT_EXIST, "failure", "Subject Already exists");
 				    		res.send(response);
 				    	}
@@ -151,6 +151,24 @@ module.exports = {
 			   }
 			   else{
 				   response = common.generateReponse(statusCode.SUCCESS, "success", result.message);
+			   }
+			   res.send(response);
+			});
+		});
+	},
+	getSubjects: function (req, res) {
+		var adminId = req.query.adminId;
+		var connection;
+		var response = {};
+		DBConnection.connect(function(con){
+			connection = con;
+			var query = sqlQueries.getAllSubjectsQuery(adminId);
+			connection.query(query, function (err, result) {
+			   if (err){
+				   response = common.generateReponse(statusCode.DB_ERROR, "failure", err);
+			   }
+			   else{
+				   response = common.generateReponse(statusCode.SUCCESS, "success", result);
 			   }
 			   res.send(response);
 			});

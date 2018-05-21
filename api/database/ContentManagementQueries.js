@@ -17,7 +17,7 @@ module.exports = {
 		return query;
 	},
 	deleteSubjectQuery: function(subjectId) {
-		var query = "UPDATE contentdb.subjects SET deleted = 1 WHERE id = '"+subjectId+"';";
+		var query = "DELETE from contentdb.subjects WHERE id = '"+subjectId+"';";
 		return query;
 	},
 	addChapterQuery: function(adminId, subjectId, chapterName, chapterDescription, parent=-1) {
@@ -40,7 +40,11 @@ module.exports = {
 		return query;
 	},
 	deleteChapterQuery: function(chapterId) {
-		var query = "UPDATE contentdb.chapters SET deleted = 1 WHERE id = '"+chapterId+"';";
+		var query = "DELETE from contentdb.chapters WHERE id = '"+chapterId+"';";
+		return query;
+	},
+	getAllSubjectsQuery: function(adminId) {
+		var query = "SELECT id, subjectname from contentdb.subjects WHERE adminid = '"+adminId+"';";
 		return query;
 	}
 };
