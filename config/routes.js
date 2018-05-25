@@ -55,5 +55,9 @@ module.exports.routes = {
   "DELETE /subject/delete": "ContentManagementController.deleteSubject",
   "POST /chapter/add-update": "ContentManagementController.addUpdateChapter",
   "DELETE /chapter/delete": "ContentManagementController.deleteChapter",
-  "GET /subject/get": "ContentManagementController.getSubjects"
+  "GET /subject/get": "ContentManagementController.getSubjects",
+  "POST /test/add-update": "TestManagementController.addUpdateTestDetails",
+  "DELETE /test/delete": "TestManagementController.deleteTestDetails",
+  "POST /question/add-update": "TestManagementController.addUpdateQuestion",
+  "DELETE /question/delete": "TestManagementController.deleteQuestion"
 };
